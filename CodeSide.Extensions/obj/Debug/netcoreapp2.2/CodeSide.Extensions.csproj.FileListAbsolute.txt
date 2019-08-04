@@ -1,0 +1,9 @@
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/bin/Debug/netcoreapp2.2/CodeSide.Extensions.deps.json
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/bin/Debug/netcoreapp2.2/CodeSide.Extensions.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/bin/Debug/netcoreapp2.2/CodeSide.Extensions.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/obj/Debug/netcoreapp2.2/CodeSide.Extensions.csproj.CoreCompileInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/obj/Debug/netcoreapp2.2/CodeSide.Extensions.AssemblyInfoInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/obj/Debug/netcoreapp2.2/CodeSide.Extensions.AssemblyInfo.cs
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/obj/Debug/netcoreapp2.2/CodeSide.Extensions.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/obj/Debug/netcoreapp2.2/CodeSide.Extensions.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/obj/Debug/netcoreapp2.2/CodeSide.Extensions.csprojAssemblyReference.cache

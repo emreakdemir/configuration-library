@@ -1,0 +1,14 @@
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/bin/Debug/netcoreapp2.2/CodeSide.Data.Dapper.deps.json
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/bin/Debug/netcoreapp2.2/CodeSide.Data.Dapper.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/bin/Debug/netcoreapp2.2/CodeSide.Data.Dapper.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/bin/Debug/netcoreapp2.2/CodeSide.Data.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/bin/Debug/netcoreapp2.2/CodeSide.Domain.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/bin/Debug/netcoreapp2.2/CodeSide.Data.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/bin/Debug/netcoreapp2.2/CodeSide.Domain.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/Debug/netcoreapp2.2/CodeSide.Data.Dapper.csprojAssemblyReference.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/Debug/netcoreapp2.2/CodeSide.Data.Dapper.csproj.CoreCompileInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/Debug/netcoreapp2.2/CodeSide.Data.Dapper.AssemblyInfoInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/Debug/netcoreapp2.2/CodeSide.Data.Dapper.AssemblyInfo.cs
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/Debug/netcoreapp2.2/CodeSide.Data.Dapper.csproj.CopyComplete
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/Debug/netcoreapp2.2/CodeSide.Data.Dapper.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/Debug/netcoreapp2.2/CodeSide.Data.Dapper.pdb

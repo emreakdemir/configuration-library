@@ -1,0 +1,73 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary/CodeSide.ConfigurationLibrary.csproj",
+    "projectName": "CodeSide.ConfigurationLibrary",
+    "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary/CodeSide.ConfigurationLibrary.csproj",
+    "outputPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "sources": {
+      "http://familopers.emre-akdemir.com/nuget": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/CodeSide.Business.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/CodeSide.Business.csproj"
+          },
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/CodeSide.Extensions.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Extensions/CodeSide.Extensions.csproj"
+          },
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/CodeSide.Redis.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/CodeSide.Redis.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Autofac": {
+          "target": "Package",
+          "version": "[4.9.3, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[12.0.2, )"
+        },
+        "ServiceStack.Redis.Complete": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
+        "ServiceStack.Redis.Core": {
+          "target": "Package",
+          "version": "[5.5.0, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

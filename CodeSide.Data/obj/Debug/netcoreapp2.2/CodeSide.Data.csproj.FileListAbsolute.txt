@@ -1,0 +1,12 @@
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/bin/Debug/netcoreapp2.2/CodeSide.Data.deps.json
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/bin/Debug/netcoreapp2.2/CodeSide.Data.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/bin/Debug/netcoreapp2.2/CodeSide.Data.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/bin/Debug/netcoreapp2.2/CodeSide.Domain.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/bin/Debug/netcoreapp2.2/CodeSide.Domain.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/obj/Debug/netcoreapp2.2/CodeSide.Data.csprojAssemblyReference.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/obj/Debug/netcoreapp2.2/CodeSide.Data.csproj.CoreCompileInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/obj/Debug/netcoreapp2.2/CodeSide.Data.AssemblyInfoInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/obj/Debug/netcoreapp2.2/CodeSide.Data.AssemblyInfo.cs
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/obj/Debug/netcoreapp2.2/CodeSide.Data.csproj.CopyComplete
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/obj/Debug/netcoreapp2.2/CodeSide.Data.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/obj/Debug/netcoreapp2.2/CodeSide.Data.pdb

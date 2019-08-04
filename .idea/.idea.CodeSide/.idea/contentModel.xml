@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.0.1/build/netcoreapp1.0" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/1.4.0/build/_common/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/1.4.0/build/_common/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/mstest.testadapter/1.4.0/build/netcoreapp1.0/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="CodeSide.Business" t="IncludeRecursive">
+        <e p="AutoMapperManager.cs" t="Include" />
+        <e p="Base" t="Include">
+          <e p="IAsyncBusiness.cs" t="Include" />
+          <e p="IBusiness.cs" t="Include" />
+          <e p="IConfigurationBusiness.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.Business.csproj" t="IncludeRecursive" />
+        <e p="ConfigurationBusiness.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.Business.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CodeSide.ConfigurationApi" t="IncludeRecursive">
+        <e p="ActionFilters" t="Include">
+          <e p="OperationLogActionFilter.cs" t="Include" />
+        </e>
+        <e p="app.config" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.ConfigurationApi.csproj" t="IncludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="ConfigurationController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.ConfigurationApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="CodeSide.ConfigurationLibrary" t="IncludeRecursive">
+        <e p="AutoFacBuilder.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.ConfigurationLibrary.csproj" t="IncludeRecursive" />
+        <e p="ConfigurationReader.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.ConfigurationLibrary.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CodeSide.ConfigurationLibrary.Test" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.ConfigurationLibrary.Test.csproj" t="IncludeRecursive" />
+        <e p="ConfigurationReaderTests.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.ConfigurationLibrary.Test.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CodeSide.Data" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.Data.csproj" t="IncludeRecursive" />
+        <e p="IAsyncRepository.cs" t="Include" />
+        <e p="IRepository.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CodeSide.Data.Dapper" t="IncludeRecursive">
+        <e p="Abstract" t="Include">
+          <e p="IConfigurationRepository.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.Data.Dapper.csproj" t="IncludeRecursive" />
+        <e p="ConfigurationRepository.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.Data.Dapper.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CodeSide.Domain" t="IncludeRecursive">
+        <e p="Abstract" t="Include">
+          <e p="Base" t="Include">
+            <e p="IConfigurationReader.cs" t="Include" />
+            <e p="IEntity.cs" t="Include" />
+            <e p="IModel.cs" t="Include" />
+          </e>
+          <e p="Entity" t="Include">
+            <e p="IConfiguration.cs" t="Include" />
+          </e>
+          <e p="Model" t="Include">
+            <e p="ICacheModel.cs" t="Include" />
+            <e p="IConfigurationModel.cs" t="Include" />
+          </e>
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.Domain.csproj" t="IncludeRecursive" />
+        <e p="Concrete" t="Include">
+          <e p="Base" t="Include">
+            <e p="Entity.cs" t="Include" />
+            <e p="Model.cs" t="Include" />
+          </e>
+          <e p="Entity" t="Include">
+            <e p="Configuration.cs" t="Include" />
+          </e>
+          <e p="Model" t="Include">
+            <e p="CacheModel.cs" t="Include" />
+            <e p="ConfigurationCacheModel.cs" t="Include" />
+            <e p="ConfigurationModel.cs" t="Include" />
+            <e p="ConnectionStringConfigModel.cs" t="Include" />
+            <e p="OperationLogModel.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CodeSide.Extensions" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.Extensions.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.Extensions.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ObjectExtensions.cs" t="Include" />
+        <e p="StringExtensions.cs" t="Include" />
+        <e p="TypeExtensions.cs" t="Include" />
+      </e>
+      <e p="CodeSide.Redis" t="IncludeRecursive">
+        <e p="Abstract" t="Include">
+          <e p="IRedisHashManager.cs" t="Include" />
+          <e p="IRedisValueManager.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CodeSide.Redis.csproj" t="IncludeRecursive" />
+        <e p="Concrete" t="Include">
+          <e p="RedisHashManager.cs" t="Include" />
+          <e p="RedisValueManager.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="CodeSide.Redis.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CodeSide.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Tests" t="Include" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_CodeSide.2058373843.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+  </component>
+</project>

@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+      <PackageReference Include="ServiceStack.Redis.Core" Version="5.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CodeSide.Domain\CodeSide.Domain.csproj" />
+      <ProjectReference Include="..\CodeSide.Extensions\CodeSide.Extensions.csproj" />
+    </ItemGroup>
+
+</Project>

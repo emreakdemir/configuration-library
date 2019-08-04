@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5038f300-1f85-4c37-b832-dd5a213946d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Test/ConfigurationReaderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Test/ConfigurationReaderTests.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Test/ConfigurationReaderTests.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="25" column="100" selection-start-line="25" selection-start-column="100" selection-end-line="25" selection-end-column="100" />
+              <folding>
+                <marker date="1564944324716" expanded="true" signature="6:253" ph="..." />
+                <marker date="1564944324716" expanded="true" signature="299:3896" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="359:3894" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="570:1432" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="596:1284" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="743:1001" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="1324:1422" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="1510:1673" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="1752:1951" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="2032:2237" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="2323:2534" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="2631:2825" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="2918:3533" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="3602:3689" ph="{...}" />
+                <marker date="1564944324716" expanded="true" signature="3775:3887" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConfigurationModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+              <folding>
+                <marker date="1564857280007" expanded="false" signature="6:74" ph="..." />
+                <marker date="1564857280007" expanded="true" signature="116:420" ph="{...}" />
+                <marker date="1564857280007" expanded="true" signature="187:418" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.Business/Base/IConfigurationBusiness.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+              <folding>
+                <marker date="1564874869551" expanded="false" signature="6:168" ph="..." />
+                <marker date="1564874869551" expanded="true" signature="202:920" ph="{...}" />
+                <marker date="1564874869551" expanded="true" signature="325:918" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.Business/ConfigurationBusiness.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
+              <folding>
+                <marker date="1564937254184" expanded="true" signature="6:258" ph="..." />
+                <marker date="1564937254184" expanded="true" signature="287:4943" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="353:4941" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="534:1061" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="626:927" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="782:913" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="967:1023" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="1179:1732" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="1271:1598" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="1453:1584" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="1638:1694" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="1796:2263" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="1869:2129" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="1998:2115" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="2169:2225" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="2378:2864" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="2451:2730" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="2599:2716" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="2770:2826" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="2932:3400" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3005:3266" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3135:3252" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3306:3362" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3462:3746" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3488:3640" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3680:3736" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3811:4098" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="3837:3992" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4032:4088" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4163:4450" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4189:4344" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4384:4440" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4497:4712" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4523:4606" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4646:4702" ph="{...}" />
+                <marker date="1564937254184" expanded="true" signature="4800:4935" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.Data.Dapper/ConfigurationRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+              <folding>
+                <marker date="1564880453915" expanded="true" signature="6:216" ph="..." />
+                <marker date="1564880453915" expanded="true" signature="248:6362" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="318:6360" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="532:1099" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="612:1089" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="1212:1992" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="1292:1982" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="2051:2701" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="2131:2691" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="2811:3904" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="2891:3894" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="3562:3777" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="3968:4626" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="4048:4616" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="4684:5061" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="4764:5051" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="5122:5728" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="5202:5718" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="5789:5908" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="5955:6214" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="6035:6204" ph="{...}" />
+                <marker date="1564880453915" expanded="true" signature="6279:6353" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.Data.Dapper/Abstract/IConfigurationRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="159">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding>
+                <marker date="1564871500025" expanded="false" signature="6:102" ph="..." />
+                <marker date="1564871500025" expanded="true" signature="143:784" ph="{...}" />
+                <marker date="1564871500025" expanded="true" signature="225:782" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Base/IConfigurationReader.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+              <folding>
+                <marker date="1564943684344" expanded="true" signature="39:140" ph="{...}" />
+                <marker date="1564943684344" expanded="true" signature="83:138" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary/ConfigurationReader.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding>
+                <marker date="1564943684351" expanded="true" signature="6:240" ph="..." />
+                <marker date="1564943684351" expanded="true" signature="281:4453" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="343:4451" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="623:1176" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="690:1042" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="926:1028" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="1082:1138" ph="{...}" />
+                <marker date="1564943684351" expanded="false" signature="1259:1709" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="1509:1698" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="1761:2833" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="1787:2727" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="2261:2595" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="2767:2823" ph="{...}" />
+                <marker date="1564943684351" expanded="true" signature="2843:3291" ph="/// Konfigürasyon tablosunun okunması, önbellek yapısında saklanması ve önbelleğin belli bir süre içerisinde yeni ... " />
+                <marker date="1564943684351" expanded="true" signature="3423:4444" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CodeSide.Extensions/ObjectExtensions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <marker date="1564935070464" expanded="false" signature="6:132" ph="..." />
+                <marker date="1564935070464" expanded="true" signature="163:3476" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="206:3474" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="299:973" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="659:875" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="1030:1907" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="1067:1897" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="1466:1743" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="1790:1848" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="2181:3369" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="2564:2935" ph="{...}" />
+                <marker date="1564935070464" expanded="true" signature="2643:2826" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>values</find>
+      <find>ICacheModel</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConnectionStringConfigModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Business/Base/IBusiness.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Business/Base/IAsyncBusiness.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Business/ConfigurationBusiness.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Business/AutoMapperManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/app.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/8B/ConstructorParameterBinding.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Entity/Configuration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Data.Dapper/Abstract/IConfigurationRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/95/ReflectionActivator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/Controllers/ConfigurationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/66/InstanceLookup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary/AutoFacBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Redis/Abstract/IRedisHashManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Entity/IConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConfigurationModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/50994DF2-4BC4-4DE8-8493-09BF476F6F9C/12/StringExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/B0041E4D-3202-4A34-AE4C-BB2D702086BB/B/SqlMapper.Async.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89C425FD-8F3D-40C8-8E36-ACC5FFFBA143/8a/529d4936/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Model/IConfigurationModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Base/Entity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Base/Model.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FED0EFF3-02BC-4881-83C7-ECCABF779AC5/d5/3fdb8d0e/BaseRunTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AEDA1EA-7722-4CA6-A7CA-C000AF27DEC0/2f/ec710eb8/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/9/RegistrationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Base/IModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Extensions/ObjectExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Business/Base/IConfigurationBusiness.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Base/IEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/ActionFilters/OperationLogActionFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/OperationLogModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E89CBBF6-C86A-4EA5-823C-BBF6C1138E51/fb/77cb5b71/LogEventInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Redis/Concrete/RedisHashManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Data/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Redis/Concrete/RedisValueManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/4530d6dba175fae6ff8f8ade6c07fd05e6c1c7c5/src/NUnitFramework/framework/Internal/Commands/SetUpTearDownItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Data/IAsyncRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Redis/Abstract/IRedisValueManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Model/ICacheModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/CacheModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Data.Dapper/ConfigurationRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConfigurationCacheModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C0C1FA0-F21E-411F-AA79-02E74C06182F/1c/9e308586/IDbConnection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Base/IConfigurationReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AEDA1EA-7722-4CA6-A7CA-C000AF27DEC0/70/17c8f540/Monitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary/ConfigurationReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Extensions/TypeExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Test/ConfigurationReaderTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/CodeSide.Extensions/StringExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/CodeSide.Data.Dapper/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Data/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Data/IRepository.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Business/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Data/IAsyncRepository.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Cache.Redis/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Cache.Redis/CacheManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Extensions/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Extensions/TypeExtensions.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Extensions/StringExtensions.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Business/Base/IBusiness.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationApi/Controllers/ValuesController.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConfigurationModelContainer.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ICacheModel.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Business/Base/IConfigurationBusiness.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Data.Dapper/Abstract/IConfigurationRepository.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConfigurationCacheModel.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Tests/ConfigurationReaderTests.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Tests/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Tests/ConfigurationReaderTest.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Business/Base/IAsyncBusiness.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.AutoMapper/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Business/AutoMapperManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Business/ConfigurationBusiness.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary/RedisManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationApi/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/CodeSide.Data.Dapper/ConfigurationRepository.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/Class1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/RedisManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/IRedisManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/Abstract/IRedisManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/Concrete/RedisManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/Abstract/IRedisValueManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationApi/ActionFilters/OperationLogActionFilter.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/OperationLogModel.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Extensions/ObjectExtensions.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationApi/Controllers/ConfigurationController.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationApi/appsettings.json" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationApi/Startup.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/Concrete/RedisValueManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConnectionStringConfig.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConnectionStringConfigModel.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Test/UnitTest1.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Abstract/Model/ICacheModel.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/CacheModel.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Redis/Concrete/RedisHashManager.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary/AutoFacBuilder.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.Domain/Abstract/Base/IConfigurationReader.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary/ConfigurationReader.cs" />
+        <option value="$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Test/ConfigurationReaderTests.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="28" />
+    <option name="y" value="23" />
+    <option name="width" value="1652" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <autoscrollToSource AssemblyExplorer="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="CodeSide" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="CodeSide" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="CodeSide.ConfigurationApi" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="5427d58d:AssemblyExplorerRootNode" />
+              <item name="NLog (4.0.0.0, msil, .NETStandard v2.0)" type="5e97225f:AssemblyExplorerNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.CodeSide.ConfigurationApi">
+    <configuration name="CodeSide.ConfigurationApi" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CodeSide.ConfigurationApi/CodeSide.ConfigurationApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="CodeSide.ConfigurationApi" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CodeSide.ConfigurationApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CodeSide.ConfigurationApi/CodeSide.ConfigurationApi.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5038f300-1f85-4c37-b832-dd5a213946d0" name="Default Changelist" comment="" />
+      <created>1564856229648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564856229648</updated>
+      <workItem from="1564856232044" duration="5557000" />
+      <workItem from="1564861982208" duration="17989000" />
+      <workItem from="1564931751451" duration="3258000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="33110000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="28" y="23" width="1652" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25590062" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.28666666" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" />
+      <window_info anchor="bottom" id="REST Client" order="16" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" weight="0.32981366" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="150" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="190" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>typeof(TType).GetUnderlyingType().Name</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CodeSide.Business/Base/IBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <marker date="1564874869546" expanded="false" signature="6:70" ph="..." />
+            <marker date="1564874869546" expanded="true" signature="104:319" ph="{...}" />
+            <marker date="1564874869546" expanded="true" signature="137:317" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Business/Base/IAsyncBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <marker date="1564874869549" expanded="false" signature="6:121" ph="..." />
+            <marker date="1564874869549" expanded="true" signature="351:568" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.AutoMapper/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/CodeSide.Business/AutoMapperManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <marker date="1564875709803" expanded="true" signature="6:94" ph="..." />
+            <marker date="1564875709803" expanded="true" signature="169:714" ph="{...}" />
+            <marker date="1564875709803" expanded="true" signature="222:707" ph="{...}" />
+            <marker date="1564875709803" expanded="true" signature="367:639" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Data/IRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <marker date="1564874869537" expanded="false" signature="6:70" ph="..." />
+            <marker date="1564874869537" expanded="true" signature="95:354" ph="{...}" />
+            <marker date="1564874869537" expanded="true" signature="163:352" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <marker date="1564874869531" expanded="false" signature="6:63" ph="..." />
+            <marker date="1564874869531" expanded="true" signature="127:481" ph="{...}" />
+            <marker date="1564874869531" expanded="true" signature="180:254" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/B0041E4D-3202-4A34-AE4C-BB2D702086BB/B/SqlMapper.Async.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8464">
+          <caret line="537" column="32" selection-start-line="537" selection-start-column="32" selection-end-line="537" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary/CodeSide.ConfigurationLibrary.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Redis/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Base/Model.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <marker date="1564857257493" expanded="true" signature="115:171" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Redis/Abstract/IRedisValueManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <marker date="1564937345194" expanded="true" signature="6:106" ph="..." />
+            <marker date="1564937345194" expanded="true" signature="183:516" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/OperationLogModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="14" column="51" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+          <folding>
+            <marker date="1564937345183" expanded="true" signature="6:36" ph="..." />
+            <marker date="1564937345183" expanded="true" signature="953:959" ph="{...}" />
+            <marker date="1564937345183" expanded="true" signature="953:961" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/50994DF2-4BC4-4DE8-8493-09BF476F6F9C/12/StringExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="519" column="29" selection-start-line="519" selection-start-column="29" selection-end-line="519" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Model/INLogModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Model/IOperationLogModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Model/ILogModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Logging.NLog/RedisTarget.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/NLogModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E89CBBF6-C86A-4EA5-823C-BBF6C1138E51/fb/77cb5b71/LogEventInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Extensions/TypeExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <marker date="1564863014868" expanded="true" signature="44:376" ph="{...}" />
+            <marker date="1564863014868" expanded="true" signature="85:374" ph="{...}" />
+            <marker date="1564863014868" expanded="true" signature="152:368" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Extensions/StringExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <marker date="1564863033341" expanded="true" signature="44:911" ph="{...}" />
+            <marker date="1564863033341" expanded="true" signature="87:909" ph="{...}" />
+            <marker date="1564863033341" expanded="true" signature="175:903" ph="{...}" />
+            <marker date="1564863033341" expanded="true" signature="201:786" ph="{...}" />
+            <marker date="1564863033341" expanded="true" signature="804:859" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/Controllers/ConfigurationController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <marker date="1564937488088" expanded="true" signature="6:224" ph="..." />
+            <marker date="1564937488088" expanded="true" signature="273:2862" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="439:2860" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="601:685" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="783:1156" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="861:962" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="1002:1109" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="1255:1621" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="1327:1427" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="1467:1574" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="1724:2032" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="1750:1844" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="1884:1991" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="2149:2460" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="2175:2272" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="2312:2419" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="2546:2854" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="2572:2666" ph="{...}" />
+            <marker date="1564937488088" expanded="true" signature="2706:2813" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Data/IAsyncRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding>
+            <marker date="1564874869540" expanded="false" signature="6:100" ph="..." />
+            <marker date="1564874869540" expanded="true" signature="125:425" ph="{...}" />
+            <marker date="1564874869540" expanded="true" signature="198:423" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/app.config">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Redis/Concrete/RedisValueManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="92" column="27" lean-forward="true" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+          <folding>
+            <marker date="1564938804770" expanded="false" signature="6:164" ph="..." />
+            <marker date="1564938804770" expanded="true" signature="199:2687" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="258:2685" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="549:1064" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="669:898" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="749:884" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="938:1026" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="1118:1467" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="1223:1429" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="1329:1415" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="1573:2379" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="1636:2245" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="1730:2231" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="1909:2191" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="2039:2165" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="2285:2341" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="2438:2678" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="2464:2572" ph="{...}" />
+            <marker date="1564938804770" expanded="true" signature="2612:2668" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="34" column="74" lean-forward="true" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
+          <folding>
+            <marker date="1564938792185" expanded="true" signature="6:422" ph="..." />
+            <marker date="1564938792185" expanded="true" signature="459:2983" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="486:2981" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="545:613" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="914:2312" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="1744:2300" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="1920:2267" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="2500:2975" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="2547:2624" ph="{...}" />
+            <marker date="1564938792185" expanded="true" signature="2641:2844" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConnectionStringConfigModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <marker date="1564939148925" expanded="true" signature="40:217" ph="{...}" />
+            <marker date="1564939148925" expanded="true" signature="87:215" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/ActionFilters/OperationLogActionFilter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <marker date="1564937345192" expanded="true" signature="6:185" ph="..." />
+            <marker date="1564937345192" expanded="true" signature="236:1998" ph="{...}" />
+            <marker date="1564937345192" expanded="true" signature="296:1996" ph="{...}" />
+            <marker date="1564937345192" expanded="true" signature="431:497" ph="{...}" />
+            <marker date="1564937345192" expanded="true" signature="655:1909" ph="{...}" />
+            <marker date="1564937345192" expanded="true" signature="1048:1581" ph="{...}" />
+            <marker date="1564937345192" expanded="true" signature="1667:1897" ph="{...}" />
+            <marker date="1564937345192" expanded="true" signature="1978:1990" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConfigurationCacheModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <marker date="1564874869557" expanded="true" signature="40:168" ph="{...}" />
+            <marker date="1564874869557" expanded="true" signature="96:166" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Model/ICacheModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding>
+            <marker date="1564940554983" expanded="true" signature="6:50" ph="..." />
+            <marker date="1564940554983" expanded="true" signature="92:321" ph="{...}" />
+            <marker date="1564940554983" expanded="true" signature="127:319" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/CacheModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding>
+            <marker date="1564940578521" expanded="true" signature="6:88" ph="..." />
+            <marker date="1564940578521" expanded="true" signature="130:573" ph="{...}" />
+            <marker date="1564940578521" expanded="true" signature="174:571" ph="{...}" />
+            <marker date="1564940578521" expanded="true" signature="510:565" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FED0EFF3-02BC-4881-83C7-ECCABF779AC5/d5/3fdb8d0e/BaseRunTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="310" column="21" selection-start-line="310" selection-start-column="21" selection-end-line="310" selection-end-column="21" />
+          <folding>
+            <marker date="1564940973131" expanded="true" signature="0:447" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1564940973131" expanded="false" signature="455:2039" ph="..." />
+            <marker date="1564940973131" expanded="true" signature="2112:22668" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="2153:22666" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="3520:3532" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="3964:4525" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4559:4630" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4575:4624" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4687:4767" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4703:4761" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4825:4905" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4841:4899" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4947:5019" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="4963:5013" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5063:5146" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5079:5140" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5183:5253" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5199:5247" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5300:5375" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5316:5369" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5435:5519" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5451:5513" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5547:6864" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5592:6791" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="5781:5999" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="6028:6286" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="6302:6783" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="6382:6539" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="6570:6773" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="6891:7088" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="7116:7441" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="8003:8224" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="8019:8062" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="8089:8218" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="8255:10412" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="8734:8962" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="9045:9211" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="10489:10571" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="10612:11296" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="11430:16290" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="11769:15899" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="12079:15538" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="12103:14789" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="12396:14739" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="13248:14252" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="13857:14169" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="14820:15430" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="15448:15528" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="15551:15891" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="16331:16439" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="16542:17053" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="16558:16822" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="16849:17047" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="17099:17111" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="17289:19202" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="17655:19070" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="18200:18432" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="18898:18972" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="19244:19306" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="19462:20102" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="19513:19889" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="19900:20096" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="20179:20982" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="20219:20424" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="20483:20957" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="21237:21549" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="21670:22071" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="21851:22038" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="22200:22662" ph="{...}" />
+            <marker date="1564940973131" expanded="true" signature="22465:22632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/9/RegistrationExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1239">
+          <caret line="850" column="26" selection-start-line="850" selection-start-column="26" selection-end-line="850" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Redis/Abstract/IRedisHashManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <marker date="1564933450571" expanded="false" signature="6:141" ph="..." />
+            <marker date="1564933450571" expanded="true" signature="176:602" ph="{...}" />
+            <marker date="1564933450571" expanded="true" signature="217:600" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/8B/ConstructorParameterBinding.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="138" column="8" selection-start-line="138" selection-start-column="8" selection-end-line="138" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/95/ReflectionActivator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="127" column="12" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D6388BD1-343C-42E2-BB21-44F4F70D3D4D/66/InstanceLookup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="127" column="12" selection-start-line="127" selection-start-column="12" selection-end-line="127" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary/AutoFacBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <marker date="1564941654897" expanded="true" signature="6:234" ph="..." />
+            <marker date="1564941654897" expanded="true" signature="275:1555" ph="{...}" />
+            <marker date="1564941654897" expanded="true" signature="311:1553" ph="{...}" />
+            <marker date="1564941654897" expanded="true" signature="473:1546" ph="{...}" />
+            <marker date="1564941654897" expanded="true" signature="1201:1450" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89C425FD-8F3D-40C8-8E36-ACC5FFFBA143/8a/529d4936/Assert.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="424" column="23" selection-start-line="424" selection-start-column="23" selection-end-line="424" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Redis/Concrete/RedisHashManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="113" column="16" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
+          <folding>
+            <marker date="1564940595788" expanded="true" signature="6:218" ph="..." />
+            <marker date="1564940595788" expanded="true" signature="253:3519" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="309:3517" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="610:1126" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="734:960" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="814:946" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1000:1088" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1199:1798" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1256:1632" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1336:1618" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1429:1600" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1672:1760" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1857:2243" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="1962:2205" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="2105:2191" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="2326:3156" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="2389:3022" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="2503:3008" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="2702:2968" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="2832:2942" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="3062:3118" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="3230:3510" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="3256:3404" ph="{...}" />
+            <marker date="1564940595788" expanded="true" signature="3444:3500" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AEDA1EA-7722-4CA6-A7CA-C000AF27DEC0/2f/ec710eb8/Int32.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Extensions/ObjectExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <marker date="1564935070464" expanded="false" signature="6:132" ph="..." />
+            <marker date="1564935070464" expanded="true" signature="163:3476" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="206:3474" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="299:973" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="659:875" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="1030:1907" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="1067:1897" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="1466:1743" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="1790:1848" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="2181:3369" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="2564:2935" ph="{...}" />
+            <marker date="1564935070464" expanded="true" signature="2643:2826" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Abstract/Base/IConfigurationReader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <marker date="1564943684344" expanded="true" signature="39:140" ph="{...}" />
+            <marker date="1564943684344" expanded="true" signature="83:138" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Data.Dapper/ConfigurationRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="120" column="26" selection-start-line="120" selection-start-column="26" selection-end-line="120" selection-end-column="26" />
+          <folding>
+            <marker date="1564880453915" expanded="true" signature="6:216" ph="..." />
+            <marker date="1564880453915" expanded="true" signature="248:6362" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="318:6360" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="532:1099" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="612:1089" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="1212:1992" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="1292:1982" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="2051:2701" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="2131:2691" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="2811:3904" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="2891:3894" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="3562:3777" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="3968:4626" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="4048:4616" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="4684:5061" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="4764:5051" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="5122:5728" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="5202:5718" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="5789:5908" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="5955:6214" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="6035:6204" ph="{...}" />
+            <marker date="1564880453915" expanded="true" signature="6279:6353" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Data.Dapper/Abstract/IConfigurationRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <marker date="1564871500025" expanded="false" signature="6:102" ph="..." />
+            <marker date="1564871500025" expanded="true" signature="143:784" ph="{...}" />
+            <marker date="1564871500025" expanded="true" signature="225:782" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Business/ConfigurationBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
+          <folding>
+            <marker date="1564937254184" expanded="true" signature="6:258" ph="..." />
+            <marker date="1564937254184" expanded="true" signature="287:4943" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="353:4941" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="534:1061" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="626:927" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="782:913" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="967:1023" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="1179:1732" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="1271:1598" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="1453:1584" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="1638:1694" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="1796:2263" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="1869:2129" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="1998:2115" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="2169:2225" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="2378:2864" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="2451:2730" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="2599:2716" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="2770:2826" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="2932:3400" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3005:3266" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3135:3252" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3306:3362" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3462:3746" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3488:3640" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3680:3736" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3811:4098" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="3837:3992" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4032:4088" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4163:4450" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4189:4344" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4384:4440" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4497:4712" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4523:4606" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4646:4702" ph="{...}" />
+            <marker date="1564937254184" expanded="true" signature="4800:4935" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Business/Base/IConfigurationBusiness.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <marker date="1564874869551" expanded="false" signature="6:168" ph="..." />
+            <marker date="1564874869551" expanded="true" signature="202:920" ph="{...}" />
+            <marker date="1564874869551" expanded="true" signature="325:918" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.Domain/Concrete/Model/ConfigurationModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+          <folding>
+            <marker date="1564857280007" expanded="false" signature="6:74" ph="..." />
+            <marker date="1564857280007" expanded="true" signature="116:420" ph="{...}" />
+            <marker date="1564857280007" expanded="true" signature="187:418" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary/ConfigurationReader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <marker date="1564943684351" expanded="true" signature="6:240" ph="..." />
+            <marker date="1564943684351" expanded="true" signature="281:4453" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="343:4451" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="623:1176" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="690:1042" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="926:1028" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="1082:1138" ph="{...}" />
+            <marker date="1564943684351" expanded="false" signature="1259:1709" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="1509:1698" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="1761:2833" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="1787:2727" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="2261:2595" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="2767:2823" ph="{...}" />
+            <marker date="1564943684351" expanded="true" signature="2843:3291" ph="/// Konfigürasyon tablosunun okunması, önbellek yapısında saklanması ve önbelleğin belli bir süre içerisinde yeni ... " />
+            <marker date="1564943684351" expanded="true" signature="3423:4444" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationLibrary.Test/ConfigurationReaderTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="100" selection-start-line="25" selection-start-column="100" selection-end-line="25" selection-end-column="100" />
+          <folding>
+            <marker date="1564944324716" expanded="true" signature="6:253" ph="..." />
+            <marker date="1564944324716" expanded="true" signature="299:3896" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="359:3894" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="570:1432" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="596:1284" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="743:1001" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="1324:1422" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="1510:1673" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="1752:1951" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="2032:2237" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="2323:2534" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="2631:2825" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="2918:3533" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="3602:3689" ph="{...}" />
+            <marker date="1564944324716" expanded="true" signature="3775:3887" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CodeSide.ConfigurationApi/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

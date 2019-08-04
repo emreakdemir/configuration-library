@@ -1,0 +1,16 @@
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/Debug/netcoreapp2.2/CodeSide.Business.csprojAssemblyReference.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/Debug/netcoreapp2.2/CodeSide.Business.csproj.CoreCompileInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/Debug/netcoreapp2.2/CodeSide.Business.AssemblyInfoInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/Debug/netcoreapp2.2/CodeSide.Business.AssemblyInfo.cs
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Business.deps.json
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Business.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Business.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Data.Dapper.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Data.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Domain.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Data.Dapper.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Data.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/bin/Debug/netcoreapp2.2/CodeSide.Domain.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/Debug/netcoreapp2.2/CodeSide.Business.csproj.CopyComplete
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/Debug/netcoreapp2.2/CodeSide.Business.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/Debug/netcoreapp2.2/CodeSide.Business.pdb

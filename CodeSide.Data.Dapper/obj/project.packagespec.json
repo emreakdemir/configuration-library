@@ -1,0 +1,63 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/CodeSide.Data.Dapper.csproj",
+    "projectName": "CodeSide.Data.Dapper",
+    "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/CodeSide.Data.Dapper.csproj",
+    "outputPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "sources": {
+      "http://familopers.emre-akdemir.com/nuget": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/CodeSide.Data.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/CodeSide.Data.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Dapper": {
+          "target": "Package",
+          "version": "[1.60.6, )"
+        },
+        "DapperExtensions": {
+          "target": "Package",
+          "version": "[1.6.3, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "MySql.Data": {
+          "target": "Package",
+          "version": "[8.0.17, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

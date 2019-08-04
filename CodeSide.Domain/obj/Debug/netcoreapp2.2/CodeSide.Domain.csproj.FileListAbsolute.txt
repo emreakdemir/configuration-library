@@ -1,0 +1,9 @@
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/bin/Debug/netcoreapp2.2/CodeSide.Domain.deps.json
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/bin/Debug/netcoreapp2.2/CodeSide.Domain.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/bin/Debug/netcoreapp2.2/CodeSide.Domain.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/obj/Debug/netcoreapp2.2/CodeSide.Domain.csprojAssemblyReference.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/obj/Debug/netcoreapp2.2/CodeSide.Domain.csproj.CoreCompileInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/obj/Debug/netcoreapp2.2/CodeSide.Domain.AssemblyInfoInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/obj/Debug/netcoreapp2.2/CodeSide.Domain.AssemblyInfo.cs
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/obj/Debug/netcoreapp2.2/CodeSide.Domain.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/obj/Debug/netcoreapp2.2/CodeSide.Domain.pdb

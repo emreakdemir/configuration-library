@@ -1,0 +1,14 @@
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/bin/Debug/netcoreapp2.2/CodeSide.Redis.deps.json
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/bin/Debug/netcoreapp2.2/CodeSide.Redis.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/bin/Debug/netcoreapp2.2/CodeSide.Redis.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/bin/Debug/netcoreapp2.2/CodeSide.Domain.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/bin/Debug/netcoreapp2.2/CodeSide.Domain.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/obj/Debug/netcoreapp2.2/CodeSide.Redis.csprojAssemblyReference.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/obj/Debug/netcoreapp2.2/CodeSide.Redis.csproj.CoreCompileInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/obj/Debug/netcoreapp2.2/CodeSide.Redis.AssemblyInfoInputs.cache
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/obj/Debug/netcoreapp2.2/CodeSide.Redis.AssemblyInfo.cs
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/obj/Debug/netcoreapp2.2/CodeSide.Redis.csproj.CopyComplete
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/obj/Debug/netcoreapp2.2/CodeSide.Redis.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/obj/Debug/netcoreapp2.2/CodeSide.Redis.pdb
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/bin/Debug/netcoreapp2.2/CodeSide.Extensions.dll
+/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Redis/bin/Debug/netcoreapp2.2/CodeSide.Extensions.pdb

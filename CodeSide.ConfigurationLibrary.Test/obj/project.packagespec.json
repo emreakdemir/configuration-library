@@ -1,0 +1,67 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary.Test/CodeSide.ConfigurationLibrary.Test.csproj",
+    "projectName": "CodeSide.ConfigurationLibrary.Test",
+    "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary.Test/CodeSide.ConfigurationLibrary.Test.csproj",
+    "outputPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary.Test/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "sources": {
+      "http://familopers.emre-akdemir.com/nuget": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary/CodeSide.ConfigurationLibrary.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationLibrary/CodeSide.ConfigurationLibrary.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "MSTest.TestAdapter": {
+          "target": "Package",
+          "version": "[1.4.0, )"
+        },
+        "MSTest.TestFramework": {
+          "target": "Package",
+          "version": "[1.4.0, )"
+        },
+        "Microsoft.NET.Test.Sdk": {
+          "target": "Package",
+          "version": "[16.0.1, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "NSubstitute": {
+          "target": "Package",
+          "version": "[4.2.1, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

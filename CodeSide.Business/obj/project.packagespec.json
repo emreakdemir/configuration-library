@@ -1,0 +1,61 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/CodeSide.Business.csproj",
+    "projectName": "CodeSide.Business",
+    "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/CodeSide.Business.csproj",
+    "outputPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "sources": {
+      "http://familopers.emre-akdemir.com/nuget": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/CodeSide.Data.Dapper.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data.Dapper/CodeSide.Data.Dapper.csproj"
+          },
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/CodeSide.Data.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Data/CodeSide.Data.csproj"
+          },
+          "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/CodeSide.Domain.csproj": {
+            "projectPath": "/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Domain/CodeSide.Domain.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "AutoMapper": {
+          "target": "Package",
+          "version": "[8.1.1, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

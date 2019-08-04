@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{56971B40-9F5B-4FBB-A532-0EF4BF5094F4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CodeSide.ConfigurationApi/Controllers/ConfigurationController.cs">
+    <Files>
+      <File FileName="CodeSide.ConfigurationApi/Controllers/ConfigurationController.cs" Line="36" Column="1" />
+      <File FileName="CodeSide.Business/ConfigurationBusiness.cs" Line="37" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CodeSide" expanded="True">
+            <Node name="CodeSide.Business" expanded="True" />
+            <Node name="CodeSide.ConfigurationApi" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="ConfigurationController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.ConfigurationApi/Controllers/ConfigurationController.cs" relfile="CodeSide.ConfigurationApi/Controllers/ConfigurationController.cs" line="21" column="1" />
+      <Breakpoint file="/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/ConfigurationBusiness.cs" relfile="CodeSide.Business/ConfigurationBusiness.cs" line="124" column="1" />
+      <Breakpoint file="/Users/emreakdemir/Documents/Projects/Familopers/CodeSide/CodeSide.Business/ConfigurationBusiness.cs" relfile="CodeSide.Business/ConfigurationBusiness.cs" line="19" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CodeSide.ConfigurationApi PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

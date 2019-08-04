@@ -17,7 +17,7 @@
 - Codeside.ConfigurationApi url'i test için https://localhost:5001 olacak şekilde ayarlanmalıdır.
 
 # MySQL Table
-
+```
 -- auto-generated definition
 CREATE TABLE Configuration
 (
@@ -28,3 +28,4 @@ CREATE TABLE Configuration
     Value           VARCHAR(500)     NOT NULL,
     IsActive        BIT DEFAULT b'1' NULL
 );
+```

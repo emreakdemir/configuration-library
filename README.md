@@ -1,5 +1,7 @@
 # CodeSide Configuration Library
 
+> **Durum (Ekim 2026):** .NET Core 2.2 üzerinde yazılmış 2019 tarihli bir çalışma. Modernizasyon planı [ROADMAP.md](ROADMAP.md) ve GitHub issue'larında; iş İZAN'dan sonra başlayacak. Aşağıdaki kurulum notları eski yığın içindir.
+
 ## CodeSide.ConfigurationApi
 
 - api/configuration endpoint üzerinden Configuration kayıtları GET, POST, PUT ve DELETE methodları ile düzenlenebilir, listelenebilir.

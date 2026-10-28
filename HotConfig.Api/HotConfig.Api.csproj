@@ -10,4 +10,8 @@
         <ProjectReference Include="..\HotConfig.Redis\HotConfig.Redis.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.14" />
+    </ItemGroup>
+
 </Project>

@@ -1,54 +1,50 @@
+using HotConfig.Api;
 using HotConfig.Business;
 using HotConfig.Business.Base;
-using HotConfig.Api.ActionFilters;
 using HotConfig.Data.Dapper;
-using HotConfig.Data.Dapper.Abstract;
-using HotConfig.Redis.Abstract;
-using HotConfig.Redis.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
-const string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-
-var configurationConnectionString = builder.Configuration.GetConnectionString("ConfigurationConnectionString");
-var redisConnectionString = builder.Configuration.GetConnectionString("RedisConnectionString");
-builder.Services.AddSingleton<IRedisHashManager>(_ => new RedisHashManager("HotConfig.Api", redisConnectionString));
-builder.Services.AddScoped<OperationLogActionFilter>();
-builder.Services.AddTransient<IConfigurationRepository>(_ => new ConfigurationRepository(configurationConnectionString));
-builder.Services.AddScoped<IConfigurationBusiness, ConfigurationBusiness>();
-
-builder.Services.AddCors(options =>
-                         {
-                             options.AddPolicy(myAllowSpecificOrigins,
-                                     policy =>
-                                     {
-                                         policy.WithOrigins("http://localhost:8080")
-                                               .AllowAnyHeader()
-                                               .AllowAnyMethod()
-                                               .AllowCredentials();
-                                     });
-                         });
+// Services resolve their settings lazily from IConfiguration so that hosts which add configuration late (tests) work.
+builder.Services.AddSingleton(sp => ApiKeyVerifier.FromConfiguration(sp.GetRequiredService<IConfiguration>()));
+builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+{
+    var options = ConfigurationOptions.Parse(sp.GetRequiredService<IConfiguration>().GetConnectionString("Redis"));
+    options.AbortOnConnectFail = false;
+    return ConnectionMultiplexer.Connect(options);
+});
+builder.Services.AddSingleton<ConfigurationCache>();
+builder.Services.AddTransient(sp => new ConfigurationRepository(sp.GetRequiredService<IConfiguration>().GetConnectionString("MySql")));
+builder.Services.AddScoped<IConfigurationBusiness>(sp => new ConfigurationBusiness(sp.GetRequiredService<ConfigurationRepository>()));
+builder.Services.AddProblemDetails();
+builder.Services.AddHealthChecks();
+builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-}
-else
-{
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+// Fail closed: resolving the verifier throws when no API key is configured.
+app.Services.GetRequiredService<ApiKeyVerifier>();
 
-app.UseCors(myAllowSpecificOrigins);
-app.UseHttpsRedirection();
-app.MapControllers();
+app.UseExceptionHandler();
+app.UseStatusCodePages();
+app.UseMiddleware<ApiKeyMiddleware>();
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+app.MapHealthChecks("/health");
+app.MapAdminApi();
+
+if (app.Environment.IsDevelopment())
+    app.MapOpenApi();
 
 app.Run();
+
+/// <summary>Entry point marker so tests can host the app with WebApplicationFactory.</summary>
+public partial class Program
+{
+}

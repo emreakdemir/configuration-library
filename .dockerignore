@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+.git/
+.github/
+.vs/
+**/node_modules/
+HotConfig.Tests/
+samples/
+*.md
+Dockerfile
+.dockerignore

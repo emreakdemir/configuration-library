@@ -110,7 +110,17 @@ namespace HotConfig
             if (this._business == null)
                 return;
 
-            var active = this._business.FilterAsync(this._options.ApplicationName).GetAwaiter().GetResult();
+            IEnumerable<ConfigurationModel> active;
+            try
+            {
+                active = this._business.FilterAsync(this._options.ApplicationName).GetAwaiter().GetResult();
+            }
+            catch (Exception)
+            {
+                // MySQL is only a seed source: when it is down, serve what Redis holds.
+                return;
+            }
+
             if (active == null)
                 return;
 

@@ -21,19 +21,18 @@ Goal: builds and tests on .NET 8 + .NET 10 with zero warnings, no committed arti
 - [ ] Target `net8.0;net10.0`; replace ServiceStack.Redis with StackExchange.Redis; Autofac → Microsoft.Extensions.DependencyInjection; Newtonsoft → System.Text.Json; drop AutoMapper
 - [ ] Reshape the library as a `Microsoft.Extensions.Configuration` provider: `builder.Configuration.AddRedisConfiguration(...)`, periodic refresh, `IOptionsMonitor<T>` change notifications. Keep `ConfigurationReader` as a thin compatibility wrapper
 - [ ] Tests: MSTest → xUnit; Redis integration tests with Testcontainers; `Build & Test` workflow
-- [ ] Admin API on minimal APIs; storage decision (keep MySQL via Dapper, or Redis-only with a JSON snapshot)
-- [ ] Vue 2 UI: remove, or rewrite later (Milestone 3). Close the dependabot PRs either way
+- [ ] Admin API on minimal APIs; storage stays MySQL (decided 2026-10-28)
+- [ ] Vue 2 UI: rewrite as a single page served by the admin API, after the API (decided 2026-10-28). The same PR deletes `codeside.ui` and closes the dependabot PRs
 
 ## Milestone 2 — 1.0 on NuGet
 
-- [ ] Pick a package name ("CodeSide" is the case-study name); update namespaces
-- [ ] LICENSE (MIT, needs Emre's sign-off)
+- [ ] Rename to **HotConfig** (package id and namespaces; "CodeSide" was the case-study name; decided 2026-10-28)
+- [x] LICENSE: MIT (decided 2026-10-28)
 - [ ] NuGet packaging: README in package, icon, SourceLink, snupkg; Trusted Publishing policy + release workflow (copy from HeroKit)
 - [ ] README EN + TR: quickstart, refresh semantics, comparison with Azure App Configuration and Consul KV
 
 ## Milestone 3 — Later
 
-- [ ] Admin UI (single page, Blazor or React) if anyone asks
 - [ ] Second store: PostgreSQL with LISTEN/NOTIFY instead of polling
 - [ ] Sample app and a refresh-latency benchmark
 

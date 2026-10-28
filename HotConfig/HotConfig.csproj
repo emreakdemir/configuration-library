@@ -19,6 +19,7 @@
         <RepositoryUrl>https://github.com/emreakdemir/configuration-library</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>hotconfig.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Copyright>Copyright © 2019-2026 Emre Akdemir</Copyright>
         <NeutralLanguage>en</NeutralLanguage>
@@ -35,6 +36,7 @@
 
     <ItemGroup>
         <None Include="../README.md" Pack="true" PackagePath="/" />
+        <None Include="hotconfig.png" Pack="true" PackagePath="/" />
     </ItemGroup>
 
     <ItemGroup>

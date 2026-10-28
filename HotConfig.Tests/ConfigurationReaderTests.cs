@@ -1,3 +1,4 @@
+#pragma warning disable CS0618 // legacy wrapper under test
 using System;
 using System.Threading.Tasks;
 using HotConfig.Business;

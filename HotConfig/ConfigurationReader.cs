@@ -1,93 +1,43 @@
 using System;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using HotConfig.Business.Base;
 using HotConfig.Domain.Abstract.Base;
 using HotConfig.Domain.Concrete.Model;
 using HotConfig.Extensions;
-using HotConfig.Redis.Abstract;
+using Microsoft.Extensions.Configuration;
 
 namespace HotConfig
 {
-    public class ConfigurationReader : IConfigurationReader
+    /// <summary>Legacy reader. A thin wrapper over <see cref="HotConfigConfigurationProvider"/>.</summary>
+    [Obsolete("Use builder.Configuration.AddHotConfig(...) and IOptionsMonitor<T>. See README.")]
+    public class ConfigurationReader : IConfigurationReader, IDisposable
     {
-        private IRedisHashManager RedisManager { get; }
-        private IConfigurationBusiness ConfigurationBusiness { get; }
-        private TimeSpan RefreshInterval { get; }
-        private string ApplicationName { get; }
+        private readonly HotConfigConfigurationProvider _provider;
 
+        /// <summary>Returns the typed value of an active record, or default when it is missing or its Type does not match.</summary>
         public TType GetValue<TType>(string key)
         {
             var result = default(TType);
             try
             {
-                var item = this.RedisManager.Get(key, async () => await this.GetConfiguration(key));
-                if (item != null &&  typeof(TType).GetUnderlyingType().Name.ToLower().Equals(item.Model.Type.ToLower()))
+                if (this._provider.TryGetRecord(key, out var record)
+                    && typeof(TType).GetUnderlyingType().Name.ToLower().Equals(record.Type?.ToLower()))
                 {
-                    result = item.Model.Value.ConvertTo<TType>();
+                    result = record.Value.ConvertTo<TType>();
                 }
             }
             catch (Exception)
             {
-                //TODO: Log
+                // Legacy contract: never throw from GetValue.
             }
 
             return result;
         }
 
-        private async Task<ConfigurationCacheModel> GetConfiguration(string name)
-        {
-            var configuration = await this.ConfigurationBusiness.GetAsync(this.ApplicationName, name);
-
-            if (configuration == null)
-                return null;
-
-            return new ConfigurationCacheModel
-                   {
-                       Model = configuration,
-                       Key = configuration.Name,
-                       ExpireDate = DateTime.Now + this.RefreshInterval
-                   };
-        }
-
-        private async void PrepareConfigurations()
-        {
-            try
-            {
-                var activeValues = await this.ConfigurationBusiness.FilterAsync(this.ApplicationName);
-
-                if (activeValues == null)
-                    return;
-
-                var configurationModels = activeValues.ToList();
-                var expireDate = DateTime.Now + this.RefreshInterval;
-                var cacheModels = configurationModels.Select(av => new CacheModel
-                                                                   {
-                                                                       Model = av,
-                                                                       Key = av.Name,
-                                                                       ExpireDate = expireDate
-                                                                   })
-                                                     .ToList();
-
-                this.RedisManager.Set(cacheModels);
-            }
-            catch (Exception)
-            {
-                //TODO: Log
-            }
-        }
-
-        /// <summary>
-        /// Konfigürasyon tablosunun okunması, önbellek yapısında saklanması ve önbelleğin belli bir süre içerisinde yenilenmesini yönetir.
-        /// </summary>
-        /// <param name="applicationName">Yüklenecek konfigürasyonların bağlı olduğu proje</param>
-        /// <param name="connectionStringConfig">Storage bağlantı bilgileri</param>
-        /// <param name="refreshInterval">Önbellek yenilenme süresi. (Ms olarak)</param>
+        /// <param name="applicationName">Application whose records are read.</param>
+        /// <param name="connectionStringConfig">Redis and (optional) MySQL connection strings.</param>
+        /// <param name="refreshInterval">Refresh interval in milliseconds.</param>
         public ConfigurationReader(string applicationName, ConnectionStringConfigModel connectionStringConfig, int refreshInterval)
         {
-            if (connectionStringConfig == null)
-                throw new ArgumentNullException(nameof(connectionStringConfig));
             if (connectionStringConfig == null)
                 throw new ArgumentNullException(nameof(connectionStringConfig));
             if (string.IsNullOrWhiteSpace(applicationName))
@@ -95,13 +45,17 @@ namespace HotConfig
             if (refreshInterval <= 0)
                 throw new ArgumentOutOfRangeException(nameof(refreshInterval));
 
-            this.ApplicationName = applicationName;
-            this.RefreshInterval = TimeSpan.FromMilliseconds(refreshInterval);
-            var serviceProviderBuilder = new ServiceProviderBuilder(connectionStringConfig, applicationName);
-            this.ConfigurationBusiness = serviceProviderBuilder.ServiceProvider.GetRequiredService<IConfigurationBusiness>();
-            this.RedisManager = serviceProviderBuilder.ServiceProvider.GetRequiredService<IRedisHashManager>();
-            this.PrepareConfigurations();
+            var root = new ConfigurationBuilder().AddHotConfig(o =>
+            {
+                o.ApplicationName = applicationName;
+                o.Redis = connectionStringConfig.RedisConnectionString;
+                o.MySql = connectionStringConfig.MySqlConnectionString;
+                o.RefreshInterval = TimeSpan.FromMilliseconds(refreshInterval);
+            }).Build();
+
+            this._provider = ((IConfigurationRoot) root).Providers.OfType<HotConfigConfigurationProvider>().Single();
         }
 
+        public void Dispose() => this._provider.Dispose();
     }
 }

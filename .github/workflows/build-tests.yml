@@ -1,0 +1,34 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore HotConfig.sln
+
+      - name: Build
+        run: dotnet build HotConfig.sln --no-restore -c Release
+
+      # Integration tests start Redis through Testcontainers (Docker is available on ubuntu-latest).
+      - name: Test
+        run: dotnet test HotConfig.sln --no-build -c Release --verbosity normal
+
+      - name: Pack (validation only)
+        run: dotnet pack HotConfig/HotConfig.csproj --no-build -c Release --output ./nuget

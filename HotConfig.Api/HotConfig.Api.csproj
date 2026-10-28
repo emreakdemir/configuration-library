@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HotConfig.Business\HotConfig.Business.csproj" />
+        <ProjectReference Include="..\HotConfig.Data.Dapper\HotConfig.Data.Dapper.csproj" />
+        <ProjectReference Include="..\HotConfig.Redis\HotConfig.Redis.csproj" />
+    </ItemGroup>
+
+</Project>

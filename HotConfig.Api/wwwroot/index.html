@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HotConfig admin</title>
+<style>
+:root { color-scheme: light dark; --bg: #f6f7f9; --panel: #fff; --text: #1b1f24; --muted: #5b6573; --line: #d8dde4;
+        --accent: #1f6feb; --accent-text: #fff; --danger: #c62828; --ok: #1b7f3b; --off: #8a94a3; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14171c; --panel: #1d2128; --text: #e6e9ee; --muted: #9aa5b4; --line: #343b46;
+          --accent: #4c8dff; --accent-text: #0b1220; --danger: #ff6b6b; --ok: #4cc26b; --off: #7d8794; } }
+* { box-sizing: border-box; }
+body { margin: 0; font: 15px/1.45 system-ui, sans-serif; background: var(--bg); color: var(--text); }
+main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+h1 { font-size: 1.25rem; margin: 0 0 12px; }
+section, dialog { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; color: var(--text); }
+section { padding: 12px; margin-bottom: 12px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+label { display: flex; flex-direction: column; gap: 2px; font-size: .85rem; color: var(--muted); flex: 1 1 160px; }
+input, select, textarea, button { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line);
+                                  border-radius: 6px; padding: 7px 9px; }
+button { cursor: pointer; background: var(--panel); }
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+button.danger { color: var(--danger); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
+#error { display: none; border: 1px solid var(--danger); color: var(--danger); border-radius: 6px; padding: 8px 10px; margin-bottom: 12px; white-space: pre-line; }
+#notice { color: var(--muted); min-height: 1.4em; margin: 4px 0 0; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: .8rem; color: var(--muted); font-weight: 600; }
+td.value { max-width: 320px; overflow-wrap: anywhere; font-family: ui-monospace, monospace; font-size: .85rem; }
+td.actions { white-space: nowrap; }
+td.actions button { padding: 4px 8px; margin-right: 4px; }
+.badge { font-weight: 600; color: var(--ok); } .badge.off { color: var(--off); }
+tr.inactive td:not(.actions) { opacity: .65; }
+.empty { color: var(--muted); padding: 16px 8px; }
+dialog { padding: 16px; width: min(480px, 94vw); }
+dialog::backdrop { background: rgba(0, 0, 0, .5); }
+dialog form { display: grid; gap: 10px; }
+dialog label { flex: none; }
+.check { flex-direction: row; align-items: center; gap: 8px; color: var(--text); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+@media (max-width: 640px) {
+  thead { display: none; }
+  table, tbody, tr, td { display: block; width: 100%; }
+  tr { border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; padding: 4px 0; }
+  td { border: 0; padding: 4px 10px; }
+  td[data-label]::before { content: attr(data-label) ": "; color: var(--muted); font-size: .8rem; }
+  td.value { max-width: none; }
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>HotConfig admin</h1>
+
+  <section aria-labelledby="key-title">
+    <h2 id="key-title" class="sr-only">API key</h2>
+    <form id="key-form" class="row">
+      <label>API key (header X-Api-Key)
+        <input id="api-key" type="password" autocomplete="off" required>
+      </label>
+      <button class="primary" type="submit">Use key</button>
+    </form>
+  </section>
+
+  <div id="error" role="alert"></div>
+
+  <section aria-labelledby="list-title">
+    <h2 id="list-title" class="sr-only">Configuration records</h2>
+    <form id="filter-form" class="row">
+      <label>Application
+        <input id="f-app" type="text" list="apps" autocomplete="off">
+        <datalist id="apps"></datalist>
+      </label>
+      <label>Name contains
+        <input id="f-name" type="text" autocomplete="off">
+      </label>
+      <label>Status
+        <select id="f-active">
+          <option value="">All</option>
+          <option value="true">Active</option>
+          <option value="false">Inactive</option>
+        </select>
+      </label>
+      <button type="submit">Filter</button>
+      <button type="button" id="new-btn" class="primary">New record</button>
+      <button type="button" id="sync-btn" title="Rewrite the Redis hash of the application in the filter from MySQL">Sync application</button>
+    </form>
+    <p id="notice" role="status" aria-live="polite"></p>
+    <table>
+      <thead><tr><th>Application</th><th>Name</th><th>Type</th><th>Value</th><th>Status</th><th><span class="sr-only">Actions</span></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div id="empty" class="empty" hidden>No records.</div>
+  </section>
+</main>
+
+<dialog id="dialog" aria-labelledby="dialog-title">
+  <form id="record-form" method="dialog">
+    <h2 id="dialog-title">Record</h2>
+    <div id="form-error" role="alert" style="color: var(--danger); white-space: pre-line"></div>
+    <label>Application <input id="r-app" required maxlength="100" autocomplete="off"></label>
+    <label>Name <input id="r-name" required maxlength="100" autocomplete="off"></label>
+    <label>Type
+      <select id="r-type" required>
+        <option>String</option><option>Int32</option><option>Int64</option><option>Boolean</option>
+        <option>Double</option><option>Decimal</option><option>DateTime</option>
+      </select>
+    </label>
+    <label>Value <textarea id="r-value" required maxlength="500" rows="3"></textarea></label>
+    <label class="check"><input id="r-active" type="checkbox" checked> Active</label>
+    <div class="row">
+      <button type="submit" class="primary">Save</button>
+      <button type="button" id="cancel-btn">Cancel</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const KEY_STORE = 'hotconfig.apiKey';
+  let editingId = null;
+
+  $('api-key').value = sessionStorage.getItem(KEY_STORE) || '';
+
+  // Calls the API and turns ProblemDetails into a readable Error message.
+  async function api(method, path, body) {
+    const headers = { 'X-Api-Key': sessionStorage.getItem(KEY_STORE) || '' };
+    if (body !== undefined) headers['Content-Type'] = 'application/json';
+    const res = await fetch(path, { method, headers, body: body === undefined ? undefined : JSON.stringify(body) });
+    if (res.status === 204) return null;
+    let data = null;
+    try { data = await res.json(); } catch (e) { /* no body */ }
+    if (!res.ok) throw new Error(problemText(res, data));
+    return data;
+  }
+
+  function problemText(res, data) {
+    if (!data) return res.status + ' ' + res.statusText;
+    const lines = [];
+    if (data.errors) {
+      for (const field of Object.keys(data.errors)) lines.push((field ? field + ': ' : '') + [].concat(data.errors[field]).join(' '));
+    } else {
+      lines.push([data.title, data.detail].filter(Boolean).join(': ') || String(res.status));
+    }
+    return lines.join('\n');
+  }
+
+  function showError(message) {
+    const box = $('error');
+    box.textContent = message || '';
+    box.style.display = message ? 'block' : 'none';
+  }
+
+  function notice(message) { $('notice').textContent = message || ''; }
+
+  function el(tag, props, children) {
+    const node = Object.assign(document.createElement(tag), props || {});
+    for (const child of children || []) node.append(child);
+    return node;
+  }
+
+  function cell(label, content, className) {
+    const td = el('td', { className: className || '' }, [content]);
+    td.dataset.label = label;
+    return td;
+  }
+
+  function actionButton(text, className, handler, record) {
+    const button = el('button', { type: 'button', className, textContent: text });
+    button.setAttribute('aria-label', text + ' ' + record.applicationName + ' / ' + record.name);
+    button.addEventListener('click', handler);
+    return button;
+  }
+
+  function renderRows(records) {
+    const rows = $('rows');
+    rows.replaceChildren();
+    for (const r of records) {
+      const status = el('span', { className: 'badge' + (r.isActive ? '' : ' off'), textContent: r.isActive ? 'Active' : 'Inactive' });
+      const actions = el('td', { className: 'actions' }, [
+        actionButton('Edit', '', () => openDialog(r), r),
+        actionButton(r.isActive ? 'Deactivate' : 'Activate', '', () => toggle(r), r),
+        actionButton('Delete', 'danger', () => remove(r), r)
+      ]);
+      rows.append(el('tr', { className: r.isActive ? '' : 'inactive' }, [
+        cell('Application', r.applicationName), cell('Name', r.name), cell('Type', r.type),
+        cell('Value', r.value, 'value'), cell('Status', status), actions
+      ]));
+    }
+    $('empty').hidden = records.length > 0;
+  }
+
+  function query() {
+    const params = new URLSearchParams();
+    if ($('f-app').value.trim()) params.set('applicationName', $('f-app').value.trim());
+    if ($('f-name').value.trim()) params.set('name', $('f-name').value.trim());
+    if ($('f-active').value) params.set('isActive', $('f-active').value);
+    const text = params.toString();
+    return '/api/configurations' + (text ? '?' + text : '');
+  }
+
+  async function load() {
+    showError('');
+    try {
+      const records = await api('GET', query());
+      renderRows(records);
+      notice(records.length + (records.length === 1 ? ' record' : ' records'));
+      const known = [...new Set(records.map((r) => r.applicationName))];
+      $('apps').replaceChildren(...known.map((name) => el('option', { value: name })));
+    } catch (e) {
+      renderRows([]);
+      notice('');
+      showError(e.message);
+    }
+  }
+
+  async function run(action, doneMessage) {
+    showError('');
+    try {
+      await action();
+      await load();
+      if (doneMessage) notice(doneMessage);
+    } catch (e) {
+      showError(e.message);
+    }
+  }
+
+  const toggle = (r) => run(() => api('POST', '/api/configurations/' + r.id + '/toggle'));
+
+  function remove(r) {
+    if (!window.confirm('Delete "' + r.name + '" from ' + r.applicationName + '? This also removes it from Redis.')) return;
+    run(() => api('DELETE', '/api/configurations/' + r.id), 'Deleted ' + r.name + '.');
+  }
+
+  function sync() {
+    const app = $('f-app').value.trim();
+    if (!app) { showError('Enter an application in the filter first.'); $('f-app').focus(); return; }
+    showError('');
+    api('POST', '/api/applications/' + encodeURIComponent(app) + '/sync')
+      .then((result) => load().then(() => notice('Synced ' + app + ': ' + result.written + ' written, ' + result.removed + ' removed.')))
+      .catch((e) => showError(e.message));
+  }
+
+  function openDialog(record) {
+    editingId = record ? record.id : null;
+    $('dialog-title').textContent = record ? 'Edit record' : 'New record';
+    $('form-error').textContent = '';
+    $('r-app').value = record ? record.applicationName : $('f-app').value.trim();
+    $('r-name').value = record ? record.name : '';
+    $('r-type').value = record ? record.type : 'String';
+    $('r-value').value = record ? record.value : '';
+    $('r-active').checked = record ? record.isActive : true;
+    $('dialog').showModal();
+    $('r-app').focus();
+  }
+
+  async function save(event) {
+    event.preventDefault();
+    const body = {
+      applicationName: $('r-app').value.trim(), name: $('r-name').value.trim(), type: $('r-type').value,
+      value: $('r-value').value, isActive: $('r-active').checked
+    };
+    try {
+      await (editingId === null ? api('POST', '/api/configurations', body) : api('PUT', '/api/configurations/' + editingId, body));
+      $('dialog').close();
+      await load();
+    } catch (e) {
+      $('form-error').textContent = e.message;
+    }
+  }
+
+  $('key-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    sessionStorage.setItem(KEY_STORE, $('api-key').value);
+    load();
+  });
+  $('filter-form').addEventListener('submit', (e) => { e.preventDefault(); load(); });
+  $('new-btn').addEventListener('click', () => openDialog(null));
+  $('sync-btn').addEventListener('click', sync);
+  $('record-form').addEventListener('submit', save);
+  $('cancel-btn').addEventListener('click', () => $('dialog').close());
+
+  if (sessionStorage.getItem(KEY_STORE)) load(); else notice('Enter the API key to load records.');
+})();
+</script>
+</body>
+</html>

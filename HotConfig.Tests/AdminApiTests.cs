@@ -269,5 +269,16 @@ namespace HotConfig.Tests
             Assert.Equal(keep.Id, hash["keep"].FromJson<ConfigurationCacheModel>().Model.Id);
             Assert.Equal(lost.Id, hash["lost"].FromJson<ConfigurationCacheModel>().Model.Id);
         }
+
+        [Fact]
+        public async Task Root_serves_the_admin_page_without_a_key()
+        {
+            using var client = this._api.CreateClient();
+            var response = await client.GetAsync("/");
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal("text/html", response.Content.Headers.ContentType?.MediaType);
+            Assert.Contains("HotConfig admin", await response.Content.ReadAsStringAsync());
+        }
     }
 }

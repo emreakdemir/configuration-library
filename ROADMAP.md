@@ -29,7 +29,7 @@ Goal: builds and tests on .NET 8 + .NET 10 with zero warnings, no committed arti
 - [x] Rename to **HotConfig** (package id and namespaces; "CodeSide" was the case-study name; decided 2026-10-28)
 - [x] LICENSE: MIT (decided 2026-10-28)
 - [ ] NuGet packaging: README in package, icon, SourceLink, snupkg; Trusted Publishing policy + release workflow (copy from HeroKit)
-- [ ] README EN + TR: quickstart, refresh semantics, comparison with Azure App Configuration and Consul KV
+- [x] README EN + TR: quickstart, refresh semantics, comparison with Azure App Configuration and Consul KV
 
 ## Milestone 3 — Later
 

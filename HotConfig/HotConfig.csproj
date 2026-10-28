@@ -2,20 +2,65 @@
 
     <PropertyGroup>
         <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+        <IsPackable>true</IsPackable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EnablePackageValidation>true</EnablePackageValidation>
+        <!-- First release: no baseline. After 1.0.0 ships, set PackageValidationBaselineVersion to the last release. -->
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);IncludeInternalAssemblies</TargetsForTfmSpecificBuildOutput>
     </PropertyGroup>
+
+    <PropertyGroup Label="Package">
+        <PackageId>HotConfig</PackageId>
+        <Title>HotConfig</Title>
+        <Authors>Emre Akdemir</Authors>
+        <Description>Redis-backed Microsoft.Extensions.Configuration provider with hot reload through IOptionsMonitor. Records can be seeded from MySQL; an admin API for managing them lives in the repository.</Description>
+        <PackageTags>configuration;redis;hot-reload;options;ioptionsmonitor;feature-flags;dotnet</PackageTags>
+        <PackageProjectUrl>https://github.com/emreakdemir/configuration-library</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/emreakdemir/configuration-library</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Copyright>Copyright © 2019-2026 Emre Akdemir</Copyright>
+        <NeutralLanguage>en</NeutralLanguage>
+    </PropertyGroup>
+
+    <PropertyGroup Label="SourceLink">
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <Deterministic>true</Deterministic>
+        <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../README.md" Pack="true" PackagePath="/" />
+    </ItemGroup>
 
     <ItemGroup>
         <InternalsVisibleTo Include="HotConfig.Tests" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\HotConfig.Business\HotConfig.Business.csproj" />
-        <ProjectReference Include="..\HotConfig.Extensions\HotConfig.Extensions.csproj" />
-        <ProjectReference Include="..\HotConfig.Redis\HotConfig.Redis.csproj" />
+        <!-- Internal libraries are not published; their assemblies are packed into lib/<tfm>/ below. -->
+        <ProjectReference Include="..\HotConfig.Business\HotConfig.Business.csproj" PrivateAssets="all" />
+        <ProjectReference Include="..\HotConfig.Extensions\HotConfig.Extensions.csproj" PrivateAssets="all" />
+        <ProjectReference Include="..\HotConfig.Redis\HotConfig.Redis.csproj" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.14" />
+      <!-- Needed by the packed internal assemblies; keep versions in line with HotConfig.Redis and HotConfig.Data.Dapper. -->
+      <PackageReference Include="StackExchange.Redis" Version="3.4.20" />
+      <PackageReference Include="Dapper" Version="2.1.89" />
+      <PackageReference Include="MySqlConnector" Version="2.6.2" />
     </ItemGroup>
+
+    <Target Name="IncludeInternalAssemblies">
+        <ItemGroup>
+            <_InternalOutput Include="@(ReferenceCopyLocalPaths)" Condition="'%(ReferenceCopyLocalPaths.ReferenceSourceTarget)' == 'ProjectReference'" />
+            <BuildOutputInPackage Include="@(_InternalOutput)" />
+        </ItemGroup>
+    </Target>
 
 </Project>

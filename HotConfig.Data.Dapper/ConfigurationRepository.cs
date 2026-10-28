@@ -48,6 +48,35 @@ namespace HotConfig.Data.Dapper
             }
         }
 
+        public async Task<IEnumerable<Configuration>> SearchAsync(string applicationName, string name, bool? isActive)
+        {
+            using (var dbConnection = this.DbConnection)
+            {
+                const string query = @"SELECT Id,
+                                              Name,
+                                              Type,
+                                              Value,
+                                              IsActive,
+                                              ApplicationName
+                                       FROM Configuration
+                                       WHERE (@ApplicationName IS NULL OR ApplicationName = @ApplicationName) AND
+                                             (@NamePattern IS NULL OR Name LIKE @NamePattern) AND
+                                             (@IsActive IS NULL OR IsActive = @IsActive)
+                                       ORDER BY ApplicationName, Name";
+
+                var namePattern = string.IsNullOrEmpty(name)
+                                          ? null
+                                          : "%" + name.Replace("\\", "\\\\").Replace("%", "\\%").Replace("_", "\\_") + "%";
+                var parameters = new
+                                 {
+                                     ApplicationName = string.IsNullOrEmpty(applicationName) ? null : applicationName,
+                                     NamePattern = namePattern,
+                                     IsActive = isActive
+                                 };
+                return await dbConnection.QueryAsync<Configuration>(query, parameters);
+            }
+        }
+
         public async Task<Configuration> GetAsync(int id)
         {
             using (var dbConnection = this.DbConnection)
@@ -111,10 +140,22 @@ namespace HotConfig.Data.Dapper
         {
             using (var dbConnection = this.DbConnection)
             {
-                const string query = @"INSERT INTO Configuration (Name, Type, Value, IsActive, ApplicationNAme)
+                const string query = @"INSERT INTO Configuration (Name, Type, Value, IsActive, ApplicationName)
                                        VALUES (@Name,@Type,@Value,@IsActive,@ApplicationName)";
 
                await dbConnection.ExecuteAsync(query, entity);
+            }
+        }
+
+        public async Task<int> InsertAsync(Configuration entity)
+        {
+            using (var dbConnection = this.DbConnection)
+            {
+                const string query = @"INSERT INTO Configuration (Name, Type, Value, IsActive, ApplicationName)
+                                       VALUES (@Name,@Type,@Value,@IsActive,@ApplicationName);
+                                       SELECT LAST_INSERT_ID();";
+
+                return Convert.ToInt32(await dbConnection.ExecuteScalarAsync<long>(query, entity));
             }
         }
 

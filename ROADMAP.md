@@ -21,7 +21,7 @@ Goal: builds and tests on .NET 8 + .NET 10 with zero warnings, no committed arti
 - [ ] Target `net8.0;net10.0`; replace ServiceStack.Redis with StackExchange.Redis; Autofac → Microsoft.Extensions.DependencyInjection; Newtonsoft → System.Text.Json; drop AutoMapper
 - [x] Reshape the library as a `Microsoft.Extensions.Configuration` provider: `builder.Configuration.AddHotConfig(...)`, periodic refresh, `IOptionsMonitor<T>` change notifications. Keep `ConfigurationReader` as a thin compatibility wrapper
 - [x] Tests: MSTest → xUnit; Redis integration tests with Testcontainers; `Build & Test` workflow
-- [ ] Admin API on minimal APIs; storage stays MySQL (decided 2026-10-28)
+- [x] Admin API on minimal APIs; storage stays MySQL (decided 2026-10-28)
 - [ ] Vue 2 UI: rewrite as a single page served by the admin API, after the API (decided 2026-10-28). The same PR deletes `codeside.ui` and closes the dependabot PRs
 
 ## Milestone 2 — 1.0 on NuGet

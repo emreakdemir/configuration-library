@@ -10,10 +10,13 @@ namespace HotConfig.Business.Base
     {
         new Task<IEnumerable<ConfigurationModel>> GetAllAsync();
         Task<IEnumerable<ConfigurationModel>> FilterAsync(string applicationName, bool isActive = true);
+        Task<IEnumerable<ConfigurationModel>> SearchAsync(string applicationName, string name, bool? isActive);
         new Task<ConfigurationModel> GetAsync(int id);
         Task<ConfigurationModel> GetAsync(string applicationName, string name, bool isActive = true);
         Task<ConfigurationModel> GetAsync(string key);
         new Task AddAsync(ConfigurationModel model);
+        /// <summary>Inserts the record and returns its new id.</summary>
+        Task<int> CreateAsync(ConfigurationModel model);
         new Task UpdateAsync(ConfigurationModel model);
         new Task RemoveAsync(ConfigurationModel model);
         Task RemoveAsync(int id);

@@ -1,169 +1,51 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HotConfig.Business.Base;
 using HotConfig.Data.Dapper.Abstract;
-using HotConfig.Domain.Concrete.Entity;
 using HotConfig.Domain.Concrete.Model;
 
 namespace HotConfig.Business
 {
+    /// <remarks>Repository failures propagate to the caller; callers decide whether to tolerate them.</remarks>
     public class ConfigurationBusiness : IConfigurationBusiness
     {
         private IConfigurationRepository Repository { get; }
 
         public async Task<IEnumerable<ConfigurationModel>> GetAllAsync()
         {
-            var result = Enumerable.Empty<ConfigurationModel>();
-
-            try
-            {
-                var configurations = await this.Repository.GetAllAsync();
-                if (configurations != null && configurations.Any())
-                {
-                    result = configurations.Select(c => c.ToModel()).ToList();
-                }
-            }
-            catch (Exception)
-            {
-                //TODO: Log
-            }
-
-            return result;
+            var configurations = await this.Repository.GetAllAsync();
+            return configurations?.Select(c => c.ToModel()).ToList() ?? new List<ConfigurationModel>();
         }
 
         public async Task<IEnumerable<ConfigurationModel>> FilterAsync(string applicationName, bool isActive = true)
         {
-            var result = Enumerable.Empty<ConfigurationModel>();
-
-            try
-            {
-                var configurations = await this.Repository.FilterAsync(applicationName, isActive);
-
-                if (configurations != null && configurations.Any())
-                {
-                    result = configurations.Select(c => c.ToModel()).ToList();
-                }
-            }
-            catch (Exception)
-            {
-                //TODO: Log
-            }
-
-            return result;
+            var configurations = await this.Repository.FilterAsync(applicationName, isActive);
+            return configurations?.Select(c => c.ToModel()).ToList() ?? new List<ConfigurationModel>();
         }
 
-        public async Task<ConfigurationModel> GetAsync(int id)
+        public async Task<IEnumerable<ConfigurationModel>> SearchAsync(string applicationName, string name, bool? isActive)
         {
-            ConfigurationModel result = null;
-
-            try
-            {
-                var configuration = await this.Repository.GetAsync(id);
-                if (configuration != null)
-                {
-                    result = configuration.ToModel();
-                }
-            }
-            catch (Exception)
-            {
-                //TODO: Log
-            }
-
-            return result;
+            var configurations = await this.Repository.SearchAsync(applicationName, name, isActive);
+            return configurations?.Select(c => c.ToModel()).ToList() ?? new List<ConfigurationModel>();
         }
+
+        public async Task<ConfigurationModel> GetAsync(int id) => (await this.Repository.GetAsync(id)).ToModel();
 
         public async Task<ConfigurationModel> GetAsync(string applicationName, string name, bool isActive = true)
-        {
-            ConfigurationModel result = null;
+            => (await this.Repository.GetAsync(applicationName, name, isActive)).ToModel();
 
-            try
-            {
-                var configuration = await this.Repository.GetAsync(applicationName, name);
-                if (configuration != null)
-                {
-                    result = configuration.ToModel();
-                }
-            }
-            catch (Exception)
-            {
-                //TODO: Log
-            }
+        public async Task<ConfigurationModel> GetAsync(string key) => (await this.Repository.GetAsync(key)).ToModel();
 
-            return result;
-        }
+        public Task AddAsync(ConfigurationModel model) => this.Repository.AddAsync(model.ToEntity());
 
-        public async Task<ConfigurationModel> GetAsync(string key)
-        {
-            ConfigurationModel result = null;
+        public Task<int> CreateAsync(ConfigurationModel model) => this.Repository.InsertAsync(model.ToEntity());
 
-            try
-            {
-                var configuration = await this.Repository.GetAsync(key);
-                if (configuration != null)
-                {
-                    result = configuration.ToModel();
-                }
-            }
-            catch (Exception)
-            {
-                //TODO: Log
-            }
+        public Task UpdateAsync(ConfigurationModel model) => this.Repository.UpdateAsync(model.ToEntity());
 
-            return result;
-        }
+        public Task RemoveAsync(ConfigurationModel model) => this.Repository.RemoveAsync(model.ToEntity());
 
-        public async Task AddAsync(ConfigurationModel model)
-        {
-            try
-            {
-                var entity = model.ToEntity();
-                await this.Repository.AddAsync(entity);
-            }
-            catch (Exception)
-            {
-                //TODO: LOG
-            }
-        }
-
-        public async Task UpdateAsync(ConfigurationModel model)
-        {
-            try
-            {
-                var entity = model.ToEntity();
-                await this.Repository.UpdateAsync(entity);
-            }
-            catch (Exception)
-            {
-                //TODO: LOG
-            }
-        }
-
-        public async Task RemoveAsync(ConfigurationModel model)
-        {
-            try
-            {
-                var entity = model.ToEntity();
-                await this.Repository.RemoveAsync(entity);
-            }
-            catch (Exception)
-            {
-                //TODO: LOG
-            }
-        }
-
-        public async Task RemoveAsync(int id)
-        {
-            try
-            {
-                await this.Repository.RemoveAsync(id);
-            }
-            catch (Exception)
-            {
-                //TODO: LOG
-            }
-        }
+        public Task RemoveAsync(int id) => this.Repository.RemoveAsync(id);
 
         public ConfigurationBusiness(IConfigurationRepository configurationRepository)
         {

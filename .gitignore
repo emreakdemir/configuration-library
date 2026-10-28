@@ -489,3 +489,6 @@ node_modules/
 
 # Local code graph
 graphify-out/
+
+# JetBrains
+.idea/

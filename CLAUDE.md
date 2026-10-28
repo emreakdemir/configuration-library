@@ -6,7 +6,7 @@ Open-source .NET library, modernisation pending. Read ROADMAP.md first; work ite
 - Each issue: own branch, small PR, build + tests pass, merge in the same session.
 - .NET SDK on this machine: `/usr/local/share/dotnet/dotnet` (10.0.x), not on PATH. Only the .NET 10 runtime is installed; net8.0 targets compile here but their tests run in CI.
 - Follow HeroKit (`~/Development/HeroKit`) for csproj metadata, warnings-as-errors, CI and the NuGet Trusted Publishing release workflow.
-- Do not add a LICENSE file or change the package name without Emre's decision (both are issues).
+- Decisions (2026-10-28): MIT license, package name HotConfig, storage stays MySQL, Vue 2 UI is rewritten as a single page after the admin API.
 - Redis for integration tests via Testcontainers; no shared Redis in tests.
 - Library-specific facts stay in this repo (here or docs); nothing goes to the root workspace memory.
 

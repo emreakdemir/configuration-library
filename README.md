@@ -2,6 +2,7 @@
 
 [![Build & Test](https://github.com/emreakdemir/configuration-library/actions/workflows/build-tests.yml/badge.svg)](https://github.com/emreakdemir/configuration-library/actions/workflows/build-tests.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![NuGet](https://img.shields.io/nuget/v/HotConfig.svg)](https://www.nuget.org/packages/HotConfig)
 
 Shared, hot-reloadable configuration for .NET services, stored in Redis.
 

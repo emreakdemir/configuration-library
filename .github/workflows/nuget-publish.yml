@@ -1,0 +1,162 @@
+name: Publish NuGet Package
+
+on:
+  release:
+    types: [ published ]
+  workflow_dispatch:
+    inputs:
+      unlist:
+        description: "Versions to unlist, separated by spaces (package:version, e.g. HotConfig:1.0.1). Leave empty to only pack."
+        required: false
+        default: ""
+      relist:
+        description: "Versions to list again, separated by spaces (package:version, e.g. HotConfig:1.0.0)."
+        required: false
+        default: ""
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  NuGetDirectory: ${{ github.workspace }}/nuget
+
+jobs:
+  pack:
+    if: github.event_name == 'release' || (inputs.unlist == '' && inputs.relist == '')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write       # attach the SBOM to the release
+      id-token: write       # sign the build provenance attestation
+      attestations: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Test
+        run: dotnet test HotConfig.sln -c Release
+
+      - name: Pack
+        run: |
+          dotnet pack HotConfig/HotConfig.csproj -c Release --output ${{ env.NuGetDirectory }}
+
+      # Software bill of materials (SPDX) for the package, from its project's resolved dependencies.
+      - name: SBOM
+        env:
+          VERSION: ${{ github.event.release.tag_name || 'dev' }}
+        run: |
+          dotnet tool install -g Microsoft.Sbom.DotNetTool
+          mkdir -p sbom
+          for p in HotConfig; do
+            mkdir -p "$RUNNER_TEMP/$p"
+            cp ${{ env.NuGetDirectory }}/$p.[0-9]*.nupkg "$RUNNER_TEMP/$p/"
+            sbom-tool generate -b "$RUNNER_TEMP/$p" -bc "$p" -pn "$p" -pv "$VERSION" -ps "Emre Akdemir" \
+              -nsb https://github.com/emreakdemir/configuration-library -m "$RUNNER_TEMP/$p" -V Warning
+            cp "$RUNNER_TEMP/$p/_manifest/spdx_2.2/manifest.spdx.json" "sbom/$p.spdx.json"
+          done
+
+      # Signed statement that this package was built by this workflow from this commit.
+      # Verify with: gh attestation verify <file>.nupkg --repo emreakdemir/configuration-library
+      - name: Build provenance
+        if: github.event_name == 'release'
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: ${{ env.NuGetDirectory }}/*.nupkg
+
+      - name: Attach SBOM to the release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" sbom/*.spdx.json --clobber
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: nuget
+          if-no-files-found: error
+          retention-days: 7
+          path: |
+            ${{ env.NuGetDirectory }}/*.nupkg
+            ${{ env.NuGetDirectory }}/*.snupkg
+
+  publish:
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    needs: [ pack ]
+    permissions:
+      id-token: write   # OIDC token for NuGet Trusted Publishing
+      contents: read
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: nuget
+          path: ${{ env.NuGetDirectory }}
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      # Exchanges the GitHub OIDC token for a 1-hour NuGet API key.
+      # Requires a Trusted Publishing policy on nuget.org for this repo and workflow file.
+      - name: NuGet login
+        id: login
+        uses: NuGet/login@v1
+        with:
+          user: emreakdemir
+
+      - name: Push to NuGet
+        run: |
+          for f in ${{ env.NuGetDirectory }}/*.nupkg; do
+            dotnet nuget push "$f" --api-key "${{ steps.login.outputs.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          done
+
+  # Unlisting hides versions from search and version lists on nuget.org; they stay downloadable by exact version.
+  # Lives in this workflow because the Trusted Publishing policy is bound to this file.
+  listing:
+    if: github.event_name == 'workflow_dispatch' && (inputs.unlist != '' || inputs.relist != '')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: NuGet login
+        id: login
+        uses: NuGet/login@v1
+        with:
+          user: emreakdemir
+
+      - name: Unlist versions
+        env:
+          VERSIONS: ${{ inputs.unlist }}
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: |
+          for item in $VERSIONS; do
+            package="${item%%:*}"
+            version="${item#*:}"
+            echo "Unlisting $package $version"
+            dotnet nuget delete "$package" "$version" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --non-interactive
+          done
+
+      # nuget.org lists a package version again on POST to the v2 package endpoint.
+      - name: Relist versions
+        env:
+          VERSIONS: ${{ inputs.relist }}
+          NUGET_API_KEY: ${{ steps.login.outputs.NUGET_API_KEY }}
+        run: |
+          for item in $VERSIONS; do
+            package="${item%%:*}"
+            version="${item#*:}"
+            echo "Relisting $package $version"
+            curl --fail-with-body -sS -X POST -H "X-NuGet-ApiKey: $NUGET_API_KEY" -H "Content-Length: 0" "https://www.nuget.org/api/v2/package/$package/$version"
+          done

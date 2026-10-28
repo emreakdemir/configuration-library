@@ -56,6 +56,7 @@ namespace HotConfig
             this._provider = ((IConfigurationRoot) root).Providers.OfType<HotConfigConfigurationProvider>().Single();
         }
 
+        /// <summary>Stops the background refresh and releases the Redis connection.</summary>
         public void Dispose() => this._provider.Dispose();
     }
 }

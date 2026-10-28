@@ -5,6 +5,9 @@
         <ImplicitUsings>disable</ImplicitUsings>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <Deterministic>true</Deterministic>
+        <!-- Only HotConfig is published; it overrides this. -->
+        <IsPackable>false</IsPackable>
+        <Version>1.0.0</Version>
     </PropertyGroup>
 
 </Project>

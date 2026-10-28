@@ -3,6 +3,7 @@ using HotConfig;
 
 namespace Microsoft.Extensions.Configuration
 {
+    /// <summary>Extension methods to add HotConfig to an <see cref="IConfigurationBuilder"/>.</summary>
     public static class HotConfigConfigurationExtensions
     {
         /// <summary>

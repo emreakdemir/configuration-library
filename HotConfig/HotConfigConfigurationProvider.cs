@@ -31,6 +31,8 @@ namespace HotConfig
         private volatile bool _disposed;
         private volatile Dictionary<string, ConfigurationModel> _records = new Dictionary<string, ConfigurationModel>(StringComparer.OrdinalIgnoreCase);
 
+        /// <summary>Creates the provider for the given source.</summary>
+        /// <param name="source">The source that holds the options.</param>
         public HotConfigConfigurationProvider(HotConfigConfigurationSource source)
         {
             if (source == null)
@@ -53,6 +55,7 @@ namespace HotConfig
         /// <summary>Finds the record behind a configuration key, including its <c>Type</c> column.</summary>
         public bool TryGetRecord(string name, out ConfigurationModel record) => this._records.TryGetValue(name, out record);
 
+        /// <inheritdoc/>
         public override void Load()
         {
             var records = this.ReadRecords();
@@ -143,6 +146,7 @@ namespace HotConfig
                 this.OnReload();
         }
 
+        /// <summary>Stops the refresh timer and releases the Redis connection.</summary>
         public void Dispose()
         {
             lock (this._refreshLock)

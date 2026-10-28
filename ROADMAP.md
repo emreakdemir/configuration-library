@@ -4,7 +4,7 @@ Decision (2026-10-15): keep configuration-library alive as an open-source .NET l
 
 ## What it is
 
-A dynamic configuration source for .NET services: values live in a store (today MySQL), are cached in Redis and refreshed on an interval, and are read through `ConfigurationReader.GetValue<T>(key)`. A small admin API and a Vue 2 UI manage the records. Written in 2019 as a case study ("CodeSide"); 2 stars, last code change 2023 (dependabot only).
+A dynamic configuration source for .NET services: values live in a store (today MySQL), are cached in Redis and refreshed on an interval, and are read through `ConfigurationReader.GetValue<T>(key)`. A small admin API and a single-page admin UI manage the records. Written in 2019 as a case study ("CodeSide"); 2 stars, last code change 2023 (dependabot only).
 
 ## Where it stands
 
@@ -22,7 +22,7 @@ Goal: builds and tests on .NET 8 + .NET 10 with zero warnings, no committed arti
 - [x] Reshape the library as a `Microsoft.Extensions.Configuration` provider: `builder.Configuration.AddHotConfig(...)`, periodic refresh, `IOptionsMonitor<T>` change notifications. Keep `ConfigurationReader` as a thin compatibility wrapper
 - [x] Tests: MSTest → xUnit; Redis integration tests with Testcontainers; `Build & Test` workflow
 - [x] Admin API on minimal APIs; storage stays MySQL (decided 2026-10-28)
-- [ ] Vue 2 UI: rewrite as a single page served by the admin API, after the API (decided 2026-10-28). The same PR deletes `codeside.ui` and closes the dependabot PRs
+- [x] Vue 2 UI: rewrite as a single page served by the admin API, after the API (decided 2026-10-28). One static `index.html` (plain HTML, CSS, JS; no build step) in `HotConfig.Api/wwwroot`; `codeside.ui` is deleted. Close the dependabot PRs when this merges
 
 ## Milestone 2 — 1.0 on NuGet
 

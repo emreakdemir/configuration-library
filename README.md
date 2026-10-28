@@ -4,19 +4,19 @@
 
 ## CodeSide.ConfigurationApi
 
-- api/configuration endpoint üzerinden Configuration kayıtları GET, POST, PUT ve DELETE methodları ile düzenlenebilir, listelenebilir.
+- `/api/configurations` (GET list with `applicationName`, `name`, `isActive` filters, GET/PUT/DELETE `/{id}`, POST, POST `/{id}/toggle`) and `POST /api/applications/{name}/sync`. Every write is mirrored into the Redis hash the provider reads.
 
-- appsettings.json içerisinde MySql ve Redis connection string değerleri set edilmelidir.
+- All `/api` calls need the `X-Api-Key` header. Set `HotConfig:ApiKey` (env `HotConfig__ApiKey`), `ConnectionStrings:MySql` and `ConnectionStrings:Redis`; the API refuses to start without a key. `GET /health` needs no key; OpenAPI is at `/openapi/v1.json` in Development.
+
+- `docker build -t hotconfig-api .` builds the single container; create the table with `db/schema.sql`.
 
 ## CodeSide.ConfigurationLibrary
 
 - ConfigurationReader class'ı Application, RefreshTime ve ConnectionString bilgileri ile initialize edildiğinde kullanılabilir. Configuration kayıtlarını Redis üzerinde bekletir, belirlenen aralıkta yenileyerek istenilen Type için kullanılmasını sağlar.
 
-## codeside.ui
+## Admin UI
 
-- Vue.JS ile basit CRUD ekranlarını kapsar. Configuration kayıtlarının listelenmesi, filtrelenmesi, eklenmesi, güncellenmesi ve silinmesi işlemlerini CodeSide.ConfigurationApi üzerinden yapılmasına olanak sağlar.
-
-- Codeside.ConfigurationApi url'i test için https://localhost:5001 olacak şekilde ayarlanmalıdır.
+- `HotConfig.Api/wwwroot/index.html` is a single static page (plain HTML, CSS and JavaScript, no build step) served at `/`. Enter the API key, then list, filter, create, edit, delete and toggle records, or sync an application to Redis.
 
 ## MySQL Table
 ```

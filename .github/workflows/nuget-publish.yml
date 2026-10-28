@@ -57,12 +57,12 @@ jobs:
             mkdir -p "$RUNNER_TEMP/$p"
             cp ${{ env.NuGetDirectory }}/$p.[0-9]*.nupkg "$RUNNER_TEMP/$p/"
             sbom-tool generate -b "$RUNNER_TEMP/$p" -bc "$p" -pn "$p" -pv "$VERSION" -ps "Emre Akdemir" \
-              -nsb https://github.com/emreakdemir/configuration-library -m "$RUNNER_TEMP/$p" -V Warning
+              -nsb https://github.com/emreakdemir/hotconfig -m "$RUNNER_TEMP/$p" -V Warning
             cp "$RUNNER_TEMP/$p/_manifest/spdx_2.2/manifest.spdx.json" "sbom/$p.spdx.json"
           done
 
       # Signed statement that this package was built by this workflow from this commit.
-      # Verify with: gh attestation verify <file>.nupkg --repo emreakdemir/configuration-library
+      # Verify with: gh attestation verify <file>.nupkg --repo emreakdemir/hotconfig
       - name: Build provenance
         if: github.event_name == 'release'
         uses: actions/attest-build-provenance@v4

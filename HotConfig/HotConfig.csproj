@@ -15,8 +15,8 @@
         <Authors>Emre Akdemir</Authors>
         <Description>Redis-backed Microsoft.Extensions.Configuration provider with hot reload through IOptionsMonitor. Records can be seeded from MySQL; an admin API for managing them lives in the repository.</Description>
         <PackageTags>configuration;redis;hot-reload;options;ioptionsmonitor;feature-flags;dotnet</PackageTags>
-        <PackageProjectUrl>https://github.com/emreakdemir/configuration-library</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/emreakdemir/configuration-library</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/emreakdemir/hotconfig</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/emreakdemir/hotconfig</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>hotconfig.png</PackageIcon>

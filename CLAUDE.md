@@ -1,4 +1,4 @@
-# configuration-library — working notes
+# HotConfig — working notes
 
 Open-source .NET library, modernisation pending. Read ROADMAP.md first; work items are GitHub issues under the "Modernise", "1.0" and "Later" milestones. Take them in issue order; the artifact cleanup goes first because every later diff is unreadable otherwise.
 

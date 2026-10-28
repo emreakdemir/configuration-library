@@ -1,6 +1,6 @@
 # Roadmap
 
-Decision (2026-10-15): keep configuration-library alive as an open-source .NET library, modernised on the HeroKit pattern (multi-target, CI, NuGet Trusted Publishing). Not a product. Work starts after İZAN; until then this file and the GitHub issues are the plan.
+Decision (2026-10-15): keep configuration-library alive as an open-source .NET library, modernised on the HeroKit pattern (multi-target, CI, NuGet Trusted Publishing). Not a product. Work starts after İZAN; until then this file and the GitHub issues are the plan. Renamed to HotConfig on 2026-10-28; the repository is now emreakdemir/hotconfig.
 
 ## What it is
 

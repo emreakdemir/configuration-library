@@ -1,19 +1,22 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using CodeSide.Domain.Abstract.Model;
 using CodeSide.Redis.Abstract;
 using CodeSide.Extensions;
-using ServiceStack.Redis;
+using StackExchange.Redis;
 
 namespace CodeSide.Redis.Concrete
 {
-    public class RedisHashManager : IRedisHashManager
+    public class RedisHashManager : IRedisHashManager, IDisposable
     {
-        public RedisManagerPool RedisManagerPool { get; }
+        private readonly Lazy<IConnectionMultiplexer> _connection;
+        private readonly bool _ownsConnection;
 
-        public IRedisClient Client => this.RedisManagerPool.GetClient();
+        public IConnectionMultiplexer Connection => this._connection.Value;
+        public IDatabase Database => this.Connection.GetDatabase();
         public string HashKey { get; }
         private readonly object _lockObject = new object();
 
@@ -25,12 +28,9 @@ namespace CodeSide.Redis.Concrete
                 return false;
             try
             {
-                using (var client = this.Client)
-                {
-                    result = client.SetEntryInHash(this.HashKey, cacheModel.Key.ToLower(), cacheModel.ToJson());
-                }
+                result = this.Database.HashSet(this.HashKey, cacheModel.Key.ToLower(), cacheModel.ToJson());
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 //TODO: Log
                 result = false;
@@ -44,15 +44,13 @@ namespace CodeSide.Redis.Concrete
             var result = true;
             try
             {
-                using (var client = this.Client)
+                var database = this.Database;
+                foreach (var cacheModel in values.Where(v => v.Model != null).ToList())
                 {
-                    foreach (var cacheModel in values.Where(v => v.Model != null).ToList())
-                    {
-                        result = client.SetEntryInHash(this.HashKey, cacheModel.Key.ToLower(), cacheModel.ToJson()) && result;
-                    }
+                    result = database.HashSet(this.HashKey, cacheModel.Key.ToLower(), cacheModel.ToJson()) && result;
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 //TODO: Log
                 result = false;
@@ -64,13 +62,10 @@ namespace CodeSide.Redis.Concrete
         public T Get<T>(string key) where T : ICacheModel
         {
             var result = default(T);
-            using (var client = this.Client)
+            string value = this.Database.HashGet(this.HashKey, key.ToLower());
+            if (!string.IsNullOrWhiteSpace(value))
             {
-                client.Hashes[this.HashKey].TryGetValue(key.ToLower(), out var value);
-                if (!string.IsNullOrWhiteSpace(value))
-                {
-                    result = value.FromJson<T>();
-                }
+                result = value.FromJson<T>();
             }
 
             return result;
@@ -99,7 +94,7 @@ namespace CodeSide.Redis.Concrete
                     }
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 //TODO: Log
             }
@@ -109,15 +104,26 @@ namespace CodeSide.Redis.Concrete
 
         public RedisHashManager(string hashKey, string connectionString)
         {
-            try
-            {
-                this.RedisManagerPool = new RedisManagerPool(connectionString);
-                this.HashKey = hashKey;
-            }
-            catch (Exception exception)
-            {
-                //TODO: LOG
-            }
+            this.HashKey = hashKey;
+            this._ownsConnection = true;
+            // Connect on first use (the previous client pool was lazy too); retry on the next call if connecting fails.
+            this._connection = new Lazy<IConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(connectionString),
+                                                                LazyThreadSafetyMode.PublicationOnly);
+        }
+
+        public RedisHashManager(string hashKey, IConnectionMultiplexer connection)
+        {
+            if (connection == null)
+                throw new ArgumentNullException(nameof(connection));
+
+            this.HashKey = hashKey;
+            this._connection = new Lazy<IConnectionMultiplexer>(() => connection);
+        }
+
+        public void Dispose()
+        {
+            if (this._ownsConnection && this._connection.IsValueCreated)
+                this._connection.Value.Dispose();
         }
 
     }

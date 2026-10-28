@@ -1,6 +1,6 @@
 using System;
 using CodeSide.Domain.Concrete.Base;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace CodeSide.Domain.Concrete.Model
 {
@@ -14,7 +14,6 @@ namespace CodeSide.Domain.Concrete.Model
         public DateTime OperationDate { get; set; }
         public string RequestPath { get; set; }
 
-        [JsonIgnore]
         private string ComputedCacheKey { get; set; } = "";
         [JsonIgnore]
         public string CacheKey

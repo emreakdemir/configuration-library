@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Globalization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace CodeSide.Extensions
 {
@@ -68,12 +67,13 @@ namespace CodeSide.Extensions
 
         public static string ToJson(this object obj, bool compress = true, bool ignoreNulls = true, bool ignoreDefaultValues = false, string dateFormatString = "yyyy-MM-ddTHH:mm:ss.fffffffzzz", bool stringEnumConverter = false, bool useJavaScriptDateTimeConverter = false)
         {
-            var formatting = Formatting.Indented;
-            if (compress)
-                formatting = Formatting.None;
-            JsonSerializerSettings settings = null;
+            if (obj == null)
+                return string.Empty;
+
+            var options = new JsonSerializerOptions { WriteIndented = !compress };
+
             if (useJavaScriptDateTimeConverter)
-                settings = new JsonSerializerSettings { Converters = new List<JsonConverter> { new JavaScriptDateTimeConverter() } };
+                options.Converters.Add(new JavaScriptDateTimeConverter());
             else
             {
                 if (string.IsNullOrWhiteSpace(dateFormatString))
@@ -81,17 +81,24 @@ namespace CodeSide.Extensions
                     var enCulture = new CultureInfo("en-US");
                     dateFormatString = enCulture.DateTimeFormat.FullDateTimePattern;
                 }
-                settings = new JsonSerializerSettings { DateFormatString = dateFormatString };
-            }
-            if (stringEnumConverter)
-                settings.Converters.Add(new StringEnumConverter());
-            if (ignoreNulls)
-                settings.NullValueHandling = NullValueHandling.Ignore;
-            if (ignoreDefaultValues)
-                settings.DefaultValueHandling = DefaultValueHandling.Ignore;
 
-            return obj != null ? JsonConvert.SerializeObject(obj, formatting, settings) : string.Empty;
+                options.Converters.Add(new FormattedDateTimeConverter(dateFormatString));
+            }
+
+            if (stringEnumConverter)
+                options.Converters.Add(new JsonStringEnumConverter());
+            if (ignoreDefaultValues)
+                options.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
+            else if (ignoreNulls)
+                options.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
+
+            // Serialize by runtime type, as the previous serializer did.
+            return JsonSerializer.Serialize(obj, obj.GetType(), options);
         }
-        public static T FromJson<T>(this string value) => JsonConvert.DeserializeObject<T>(value);
+
+        public static T FromJson<T>(this string value) => JsonSerializer.Deserialize<T>(value, FromJsonOptions);
+
+        // The previous serializer matched property names case-insensitively and read dates with the standard parser.
+        private static readonly JsonSerializerOptions FromJsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
     }
 }

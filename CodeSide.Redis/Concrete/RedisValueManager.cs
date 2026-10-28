@@ -1,18 +1,22 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using CodeSide.Domain.Abstract.Base;
 using CodeSide.Extensions;
 using CodeSide.Redis.Abstract;
-using ServiceStack.Redis;
+using StackExchange.Redis;
 
 namespace CodeSide.Redis.Concrete
 {
 
-    public class RedisValueManager : IRedisValueManager
+    public class RedisValueManager : IRedisValueManager, IDisposable
     {
         private readonly object _lockObject = new object();
-        public RedisManagerPool RedisManagerPool { get; }
-        public IRedisClient Client => this.RedisManagerPool.GetClient();
+        private readonly Lazy<IConnectionMultiplexer> _connection;
+        private readonly bool _ownsConnection;
+
+        public IConnectionMultiplexer Connection => this._connection.Value;
+        public IDatabase Database => this.Connection.GetDatabase();
 
         public bool Set<T>(string key, T model, TimeSpan? expiresIn = null) where T : IModel
         {
@@ -22,12 +26,9 @@ namespace CodeSide.Redis.Concrete
                 return false;
             try
             {
-                using (var client = this.Client)
-                {
-                    result = expiresIn.HasValue ? client.Set(key, model, expiresIn.Value) : client.Set(key, model);
-                }
+                result = this.Database.StringSet(key, model.ToJson(), expiresIn, When.Always);
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 //TODO: Log
                 result = false;
@@ -39,13 +40,10 @@ namespace CodeSide.Redis.Concrete
         public T Get<T>(string key) where T : IModel
         {
             var result = default(T);
-            using (var client = this.Client)
+            string value = this.Database.StringGet(key);
+            if (!string.IsNullOrWhiteSpace(value))
             {
-                var value = client.GetValue(key);
-                if (!string.IsNullOrWhiteSpace(value))
-                {
-                    result = value.FromJson<T>();
-                }
+                result = value.FromJson<T>();
             }
 
             return result;
@@ -74,7 +72,7 @@ namespace CodeSide.Redis.Concrete
                     }
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 //TODO: Log
             }
@@ -84,14 +82,24 @@ namespace CodeSide.Redis.Concrete
 
         public RedisValueManager(string connectionString)
         {
-            try
-            {
-                this.RedisManagerPool = new RedisManagerPool(connectionString);
-            }
-            catch (Exception exception)
-            {
-                //TODO: LOG
-            }
+            this._ownsConnection = true;
+            // Connect on first use (the previous client pool was lazy too); retry on the next call if connecting fails.
+            this._connection = new Lazy<IConnectionMultiplexer>(() => ConnectionMultiplexer.Connect(connectionString),
+                                                                LazyThreadSafetyMode.PublicationOnly);
+        }
+
+        public RedisValueManager(IConnectionMultiplexer connection)
+        {
+            if (connection == null)
+                throw new ArgumentNullException(nameof(connection));
+
+            this._connection = new Lazy<IConnectionMultiplexer>(() => connection);
+        }
+
+        public void Dispose()
+        {
+            if (this._ownsConnection && this._connection.IsValueCreated)
+                this._connection.Value.Dispose();
         }
 
     }

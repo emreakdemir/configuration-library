@@ -1,17 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CodeSide.Data.Dapper\CodeSide.Data.Dapper.csproj" />
-      <ProjectReference Include="..\CodeSide.Data\CodeSide.Data.csproj" />
-      <ProjectReference Include="..\CodeSide.Domain\CodeSide.Domain.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="AutoMapper" Version="8.1.1" />
+        <ProjectReference Include="..\CodeSide.Data.Dapper\CodeSide.Data.Dapper.csproj" />
+        <ProjectReference Include="..\CodeSide.Data\CodeSide.Data.csproj" />
+        <ProjectReference Include="..\CodeSide.Domain\CodeSide.Domain.csproj" />
     </ItemGroup>
 
 </Project>

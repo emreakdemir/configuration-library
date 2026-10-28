@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 using CodeSide.Domain.Abstract.Base;
 using CodeSide.Domain.Abstract.Model;
 
@@ -6,6 +7,7 @@ namespace CodeSide.Domain.Concrete.Model
 {
     public class CacheModel : ICacheModel
     {
+        [JsonConverter(typeof(RuntimeTypeModelConverter))]
         public virtual IModel Model { get; set; }
         public string Key { get; set; }
         public bool Renewable { get; set; }

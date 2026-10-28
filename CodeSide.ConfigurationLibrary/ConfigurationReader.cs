@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Autofac;
+using Microsoft.Extensions.DependencyInjection;
 using CodeSide.Business.Base;
 using CodeSide.Domain.Abstract.Base;
 using CodeSide.Domain.Concrete.Model;
@@ -28,7 +28,7 @@ namespace CodeSide.ConfigurationLibrary
                     result = item.Model.Value.ConvertTo<TType>();
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 //TODO: Log
             }
@@ -72,7 +72,7 @@ namespace CodeSide.ConfigurationLibrary
 
                 this.RedisManager.Set(cacheModels);
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 //TODO: Log
             }
@@ -97,9 +97,9 @@ namespace CodeSide.ConfigurationLibrary
 
             this.ApplicationName = applicationName;
             this.RefreshInterval = TimeSpan.FromMilliseconds(refreshInterval);
-            var autoFacBuilder = new AutoFacBuilder(connectionStringConfig, applicationName);
-            this.ConfigurationBusiness = autoFacBuilder.Container.Resolve<IConfigurationBusiness>();
-            this.RedisManager = autoFacBuilder.Container.Resolve<IRedisHashManager>();
+            var serviceProviderBuilder = new ServiceProviderBuilder(connectionStringConfig, applicationName);
+            this.ConfigurationBusiness = serviceProviderBuilder.ServiceProvider.GetRequiredService<IConfigurationBusiness>();
+            this.RedisManager = serviceProviderBuilder.ServiceProvider.GetRequiredService<IRedisHashManager>();
             this.PrepareConfigurations();
         }
 

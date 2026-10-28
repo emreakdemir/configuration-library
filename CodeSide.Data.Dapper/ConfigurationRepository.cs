@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using CodeSide.Data.Dapper.Abstract;
 using CodeSide.Domain.Concrete.Entity;
 using Dapper;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
 
 namespace CodeSide.Data.Dapper
 {

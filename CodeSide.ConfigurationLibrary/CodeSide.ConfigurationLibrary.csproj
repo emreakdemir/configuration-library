@@ -1,20 +1,17 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp2.2</TargetFramework>
+        <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\CodeSide.Business\CodeSide.Business.csproj" />
-      <ProjectReference Include="..\CodeSide.Extensions\CodeSide.Extensions.csproj" />
-      <ProjectReference Include="..\CodeSide.Redis\CodeSide.Redis.csproj" />
+        <ProjectReference Include="..\CodeSide.Business\CodeSide.Business.csproj" />
+        <ProjectReference Include="..\CodeSide.Extensions\CodeSide.Extensions.csproj" />
+        <ProjectReference Include="..\CodeSide.Redis\CodeSide.Redis.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Autofac" Version="4.9.3" />
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-      <PackageReference Include="ServiceStack.Redis.Complete" Version="1.0.0" />
-      <PackageReference Include="ServiceStack.Redis.Core" Version="5.5.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.14" />
     </ItemGroup>
 
 </Project>

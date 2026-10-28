@@ -77,7 +77,7 @@ namespace CodeSide.ConfigurationLibrary.Test
         {
             var mailEnabled = this.ConfigurationReader.GetValue<int?>("mailenabled");
 
-            bool? expected = null;
+            int? expected = null;
             Assert.AreEqual(expected, mailEnabled);
         }
 
